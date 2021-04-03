@@ -1,9 +1,9 @@
 
 	
-	package Show;
+	package entity;
 
-	import Show.Evento;
-	import Show.Recital;
+	import entity.Evento;
+import entity.Recital;
 
 	public class Teatro extends Evento {
 		

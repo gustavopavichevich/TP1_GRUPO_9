@@ -1,8 +1,8 @@
-package Show;
+package main;
 
-import Show.Entrada;
-import Show.Evento;
-import Show.Recital;
+import entity.Entrada;
+import entity.Evento;
+import entity.Recital;
 
 public class Principal {
 

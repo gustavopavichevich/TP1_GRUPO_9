@@ -1,6 +1,6 @@
-package Show;
+package entity;
 
-	import Show.Evento;
+	import entity.Evento;
 
 	public class Deportes extends Evento {
 		

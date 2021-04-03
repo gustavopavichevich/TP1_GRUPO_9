@@ -1,4 +1,4 @@
-package Show;
+package entity;
 
 public class Entrada {
 	
