@@ -1,15 +1,15 @@
 package entity;
 
-public class Entrada {
+public abstract class Entrada { //#pavi: podemos implementar esta clase como abstract
+								// si bien no la instanciamos directamente lo que hacemos
+								//es vender entradas de algun evento
 	
 	//atributos
 	
 	private int identrada;
-
-    
-	
 	private static int cont=0;
-	
+	private String tipoEntrada;
+	private int valor;
 	//método
 	
 	public static int devuelveProximoId()
@@ -32,7 +32,18 @@ public class Entrada {
 		this.identrada = cont++;
 	}
 	
-	
+//
+//Esta parte del código la regeneré para mostrar el encapsulamiento
+//	public static int getCont() {
+//		return cont;
+//	}
+//
+//
+//	public static void setCont(int cont) {
+//		Entrada.cont = cont;
+//	}
+//
+
 	public int getIdentrada() {
 		return identrada;
 	}
@@ -40,6 +51,26 @@ public class Entrada {
 
 	public void setIdentrada(int identrada) {
 		this.identrada = identrada;
+	}
+
+
+	public String getTipoEntrada() {
+		return tipoEntrada;
+	}
+
+
+	public void setTipoEntrada(String tipoEntrada) {
+		this.tipoEntrada = tipoEntrada;
+	}
+
+
+	public int getValor() {
+		return valor;
+	}
+
+
+	public void setValor(int valor) {
+		this.valor = valor;
 	}
 
 

@@ -5,7 +5,7 @@ import entity.Evento;
 public class Recital extends Evento {
 	
 	private boolean vip;
-	public String genero;
+	public Genero genero;
 	private int cantsoporte;
 	
 	
@@ -17,7 +17,7 @@ public class Recital extends Evento {
 	
 	public Recital(boolean vip, String genero, int cantsoporte)
 	{
-		this.genero=genero;
+		this.setGenero(genero);
 	    this.vip=vip;
 		this.cantsoporte=cantsoporte;
 	}
@@ -33,11 +33,11 @@ public class Recital extends Evento {
 	}
 
 	public String getGenero() {
-		return genero;
+		return this.genero.getDescripcion();
 	}
 
 	public void setGenero(String genero) {
-		this.genero = genero;
+		this.genero.setDescripcion(genero);
 	}
 
 	public int getCantsoporte() {
