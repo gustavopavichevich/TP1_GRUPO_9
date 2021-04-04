@@ -1,21 +1,23 @@
 package util;
+
 import entity.Show;
+
 public class ComprarEntrada {
-	private String show;
+	private Show show;
 
 	public ComprarEntrada() {
 		super();
 	}
-	public ComprarEntrada(String show) {
+	public ComprarEntrada(Show show) {
 		this.show = show;
 	}
 	
-	public String getShow() {
+	public Show getShow() {
 		return show;
 	}
 
-	public void setShow(String show) {
-		show = show;
+	public void setShow(Show show) {
+		this.show = show;
 	}
 	
 }
