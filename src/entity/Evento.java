@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.Date;
+
 import entity.Entrada;
 
 public class Evento extends Entrada {
@@ -7,9 +9,10 @@ public class Evento extends Entrada {
 	private int idEvento;
 	private String tipoEvento;
 //	int precio;  #pavi:esta propiedad es propia de la entrada
-	private int dia;
-	private int mes;
-	private int anio;
+	private Date fecha;//#German: esto lo agrego para reemplazar los int de dia,mes y año
+//	private int dia;
+//	private int mes;
+//	private int anio;
 	private int duracion;
 	
 
@@ -18,17 +21,18 @@ public class Evento extends Entrada {
 		super();
 	}
 	
-	public Evento(int idevento, String tipoevento, int valor, int dia, int mes, int anio, int duracion) {
+	public Evento(int idevento, String tipoevento, int valor, Date fecha, int duracion) {
 		this.idEvento = idevento;
 		this.tipoEvento = tipoevento;
 //		this.setTipoEntrada(|); #pavi:esto me parece que no vá
-		this.dia = dia;
-		this.mes = mes;
-		this.anio = anio;
+		this.fecha=fecha;
+//		this.dia = dia;
+//		this.mes = mes;
+//		this.anio = anio;
 		this.duracion = duracion;
 	}
 	// agregar variable fecha????#pavi: consideré que era necesario ingresar la fecha porque lo menciona en práctica
-	public int getDia() {
+	/*public int getDia() {
 		return dia;
 	}
 	
@@ -50,12 +54,20 @@ public class Evento extends Entrada {
 	
 	public void setAnio(int año) {
 		this.anio = año;
-	}
+	}*/
 	
 	public int getDuracion() {
 		return duracion;
 	}
 	
+	public Date getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
+
 	public void setDuracion(int duracion) {
 		this.duracion = duracion;
 	}
