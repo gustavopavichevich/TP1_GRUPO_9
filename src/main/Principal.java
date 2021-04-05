@@ -6,6 +6,7 @@ import dao.EventoDAO;
 import entity.Entrada;
 
 import entity.Evento;
+import entity.Infantil;
 import entity.Show;
 import util.Gestion;
 
@@ -24,6 +25,24 @@ public class Principal {
 	//System.out.println(fechaFormateada.format(fecha));
 		
 //
+		
+		
+		
+		
+//		Infantil prueba = new Infantil();
+	//	System.out.println(prueba.toString());
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	show.setIdShow(4);
 evento.setDuracion(12);
 evento.setFecha(fecha);
@@ -33,15 +52,15 @@ evento.setTipoEntrada("CUAL ES LA DIFERENCIA CON TIPO DE EVENTO??");
 evento.setTipoEvento("Recital");
 evento.setTitulo("LPDA EN LUNA PARK");
 evento.setValor(50);
-//
+///
 System.out.println("Datos del SHOW: " + show.toString());
-
+//
 System.out.println("");
-
+//
 System.out.println("Datos del EVENTO: " + evento.toString());
-
+//
 System.out.println("");
-
+//
 System.out.println("Datos de la ENTRADA: ");
 System.out.println("Id de Entrada: "+ evento.getIdentrada());
 System.out.println(("Tipo de entrada: "+ evento.getTipoEntrada()));
