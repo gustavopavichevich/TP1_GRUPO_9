@@ -54,4 +54,10 @@ public class Teatro extends Evento implements IGeneroDAO{
 		return this.genero;
 	}
 
+	@Override
+	public String toString() {
+		return "Teatro [genero=" + genero + ", cantactores=" + cantactores + "]";
+	}
+	
+
 }

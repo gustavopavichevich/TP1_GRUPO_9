@@ -65,4 +65,11 @@ public abstract class Entrada { // #pavi: podemos implementar esta clase como ab
 		this.valor = valor;
 	}
 
+	@Override
+	public String toString() {
+		return "Entrada [identrada=" + identrada + ", tipoEntrada=" + tipoEntrada + ", valor=" + valor + "]";
+	}
+
+	
+	
 }

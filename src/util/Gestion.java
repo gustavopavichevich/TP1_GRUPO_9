@@ -4,9 +4,10 @@ import entity.Show;
 
 public class Gestion {
 	private Show show;
-
+	
 	// CONSTRUCTORES
 	public Gestion() {
+		//PruebaGit
 	}
 
 	public Gestion(Show show) {

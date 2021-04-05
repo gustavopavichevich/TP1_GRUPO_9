@@ -107,4 +107,12 @@ public class Evento extends Entrada {
 		this.titulo = titulo;
 	}
 
+	@Override
+	public String toString() {
+		return "Evento [idEvento=" + idEvento + ", titulo=" + titulo + ", tipoEvento=" + tipoEvento + ", fecha=" + fecha
+				+ ", duracion=" + duracion + "]";
+	}
+	
+	
+
 }

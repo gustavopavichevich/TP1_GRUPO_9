@@ -10,6 +10,7 @@ public class Show {
 	public Show() {
 	}
 
+
 	public Show(Evento evento) {
 		this.evento.setDuracion(evento.getDuracion());
 		this.evento.setFecha(evento.getFecha());
@@ -38,5 +39,9 @@ public class Show {
 		this.evento = evento;
 	}
 
+	@Override
+	public String toString() {
+		return "Show [idShow=" + idShow + "]";
+	}
 }
 
