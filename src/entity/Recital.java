@@ -1,28 +1,29 @@
 package entity;
-
+import dao.IGeneroDAO;
 import entity.Evento;
 
-public class Recital extends Evento {
-	
+public class Recital extends Evento implements IGeneroDAO{
+
 	private boolean vip;
 	public Genero genero;
 	private int cantsoporte;
-	
-	
-	
-	public Recital()
-	{
+	private static int cont = 0;
+
+
+	// CONTRUCTORES
+
+	public Recital() {
 		super();
 	}
-	
-	public Recital(boolean vip, String genero, int cantsoporte)
-	{
+
+	public Recital(boolean vip, String genero, int cantsoporte) {
+		super();
 		this.setGenero(genero);
-	    this.vip=vip;
-		this.cantsoporte=cantsoporte;
+		this.vip = vip;
+		this.cantsoporte = cantsoporte;
 	}
-	
-	//gets y sets
+
+	// METODOS
 
 	public boolean isVip() {
 		return vip;
@@ -47,10 +48,20 @@ public class Recital extends Evento {
 	public void setCantsoporte(int cantsoporte) {
 		this.cantsoporte = cantsoporte;
 	}
-	
-	
-	
-	
-	
+
+	public static int getCont() {
+		return cont;
+	}
+
+	public static void setCont(int cont) {
+		Recital.cont = cont;
+	}
+
+	@Override
+	public Genero consultarGenero() {
+		return this.genero;
+		// TODO Auto-generated method stub
+		
+	}
 
 }

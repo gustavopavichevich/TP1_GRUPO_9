@@ -1,42 +1,57 @@
 
-	
-	package entity;
+package entity;
 
-	import entity.Evento;
-import entity.Recital;
+import dao.IGeneroDAO;
 
-	public class Teatro extends Evento {
-		
-		private Recital genero; 
-		private int cantactores;
-		
-		
-		
-		public Teatro()
-		{
-			super();
-		}
-		
-		public Teatro(String generoteatro, int cantactores)
-		{
-			this.setCantactores(cantactores);
-			
-		}
+public class Teatro extends Evento implements IGeneroDAO{
 
-		public Recital getGenero() {
-			return genero;
-		}
+	private Genero genero;
+	private int cantactores;
+	private static int cont = 0;
 
-		public void setGenero(Recital genero) {
-			this.genero = genero;
-		}
 
-		public int getCantactores() {
-			return cantactores;
-		}
+	// CONSTRUCTOR
 
-		public void setCantactores(int cantactores) {
-			this.cantactores = cantactores;
-		}
+	public Teatro() {
+		super();
+	}
+
+	public Teatro(String generoteatro, int cantactores) {
+		super();
+		this.setCantactores(cantactores);
+
+	}
+
+	// METODOS
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+
+	public int getCantactores() {
+		return cantactores;
+	}
+
+	public void setCantactores(int cantactores) {
+		this.cantactores = cantactores;
+	}
+
+	public static int getCont() {
+		return cont;
+	}
+
+	public static void setCont(int cont) {
+		Teatro.cont = cont;
+	}
+
+	@Override
+	public Genero consultarGenero() {
+		// TODO Auto-generated method stub
+		return this.genero;
+	}
 
 }

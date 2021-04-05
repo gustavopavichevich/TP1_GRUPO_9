@@ -4,14 +4,17 @@ public class Genero {
 	private int idGenero;
 	private String descripcion;
 
+	// CONSTRUCTORES
+
 	public Genero() {
-		super();
 	}
-	
+
 	public Genero(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	
+
+	// METODOS
+
 	public int getIdGenero() {
 		return idGenero;
 	}
