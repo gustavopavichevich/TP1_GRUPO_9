@@ -2,22 +2,25 @@ package main;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import entity.Bandas;
 import entity.Deportes;
 
 //import dao.EventoDAO;
 //import entity.Entrada;
 
-import entity.Evento;
-import entity.Infantil;
+import entity.Eventos;
+import entity.Infantiles;
 //import entity.Show;
 //import util.Gestion;
+import entity.Recitales;
+import entity.Teatros;
 
 public class Principal {
 
 	public static void main(String[] args) {
 		//Gestion gestion = new Gestion();
 		//Show show = new Show();
-		Evento evDeporte = new Deportes(true,"Futbol");
+		Eventos evDeporte = new Deportes(true,"Futbol");
 	//	EventoDAO DAO = new EventoDAO();
 		
 		Date fecha = new Date();
@@ -27,15 +30,22 @@ public class Principal {
 	//System.out.println(fechaFormateada.format(fecha));
 		
 //
+		//Inicio prueba german recitales
+		//Me falta hacerlo andar, nose por que no me toma los string
+		Eventos evRecital = new Recitales(true,"Rock","Metalica",0);
+		System.out.println(evRecital.toString());
+		//Fin prueba german recitales
+		
 		
 		System.out.println(evDeporte.toString());
 		
 		
-//		Infantil prueba = new Infantil();
-	//	System.out.println(prueba.toString());
+		Infantiles prueba = new Infantiles(4);
+		System.out.println(prueba.toString());
 		
-		
-		
+
+		Teatros pruebat = new Teatros();
+		System.out.println(pruebat.toString());
 		
 		
 		
