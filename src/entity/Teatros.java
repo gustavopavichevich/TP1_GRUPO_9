@@ -3,19 +3,32 @@ package entity;
 
 import dao.IGenerosDAO;
 
-public class Teatros extends Eventos implements IGenerosDAO{
+public class Teatros extends Eventos implements IGenerosDAO {
 
 	private Generos genero;
 	private Actores actores;
 	private int cantactores;
-	//private static int cont = 0;
 
-
-	// CONSTRUCTOR
+	// CONSTRUCTORES
 
 	public Teatros() {
 		super();
 	}
+
+	public Teatros(Generos genero, Actores actores, int cantactores) {
+		super();
+		this.genero = genero;
+		this.actores = actores;
+		this.cantactores = cantactores;
+	}
+
+	public Teatros(String generoteatro, Actores actores, int cantactores) {
+		super();
+		this.setCantactores(cantactores);
+		this.setActores(actores);
+	}
+
+	// METODOS
 
 	public Actores getActores() {
 		return actores;
@@ -25,25 +38,6 @@ public class Teatros extends Eventos implements IGenerosDAO{
 		this.actores = actores;
 	}
 
-	
-	
-	public Teatros(Generos genero, Actores actores, int cantactores) {
-		super();
-		this.genero = genero;
-		this.actores = actores;
-		this.cantactores = cantactores;
-	}
-
-	public Teatros(String generoteatro,Actores actores, int cantactores) {
-		super();
-		//this.setGenero(generoteatro);
-		this.setCantactores(cantactores);
-		this.setActores(actores);
-
-	}
-
-	// METODOS
-
 	public Generos getGenero() {
 		return genero;
 	}
@@ -52,9 +46,6 @@ public class Teatros extends Eventos implements IGenerosDAO{
 		this.genero = genero;
 	}
 
-	
-	
-	
 	public int getCantactores() {
 		return cantactores;
 	}
@@ -63,29 +54,22 @@ public class Teatros extends Eventos implements IGenerosDAO{
 		this.cantactores = cantactores;
 	}
 
-	/*public static int getCont() {
-		return cont;
-	}
-
-	public static void setCont(int cont) {
-		Teatros.cont = cont;
-	}*/
-
 	@Override
 	public String consultarGenero() {
 		// TODO Auto-generated method stub
 		return this.genero.getDescripcion();
-				}
-	
+	}
 
 	@Override
 	public String toString() {
-		return "Teatros [Genero: " + genero.getDescripcion() + ", Actores: " + actores.getNombre() + " " 
-		+ actores.getApellido()+ " , Cant. de actores: " + cantactores + "]";
-	}
-	
-	public double bonificaCorporativo(int cantInvitados, String Empresa) {
-		return 1.0;
+		return "Teatros [Genero: " + genero.getDescripcion() + ", Actores: " + actores.getNombre() + " "
+				+ actores.getApellido() + " , Cant. de actores: " + cantactores + "]";
 	}
 
+	public double bonificaCorporativo(int cantInvitados) {
+		if (cantInvitados > 20) {
+			return super.getPrecio() * 0.85;
+		}
+		return super.getPrecio();
+	}
 }

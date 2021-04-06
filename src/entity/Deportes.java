@@ -1,13 +1,11 @@
 package entity;
 
-import java.util.Arrays;
-import dao.IGenerosDAO;
 import entity.Eventos;
 
 public class Deportes extends Eventos {
-	
-	private final String[] tipoDeportes = {"Futbol","Rugby","Hockey"};
-	private final int[] precioDeportes = {300,450,380};
+
+	private final String[] tipoDeportes = { "Futbol", "Rugby", "Hockey" };
+	private final int[] precioDeportes = { 300, 450, 380 };
 	private final double recargo = 1.3;
 	private String tipodeporte;
 	private boolean internacional;
@@ -21,20 +19,21 @@ public class Deportes extends Eventos {
 	public Deportes(boolean internacional, String tipo) {
 		super();
 		this.internacional = internacional;
-		for(int i=0; i< tipoDeportes.length;i++) {
-			if(tipo==tipoDeportes[i]) {
+		for (int i = 0; i < tipoDeportes.length; i++) {
+			if (tipo == tipoDeportes[i]) {
 				this.tipodeporte = tipo;
 				super.setPrecio(precioDeportes[i]);
 			}
 		}
-		
-		//este control se puede borrar si en la entrada de datos filtramos que ingrese solo uno de esos 3
-		if(this.tipodeporte=="") {System.out.println("Tipo deporte incorrecto");}
-		
-		if(this.internacional) {
-			super.setPrecio(super.getPrecio()*this.recargo);
+
+		if (this.tipodeporte == "") {
+			System.out.println("Tipo deporte incorrecto");
 		}
-		
+
+		if (this.internacional) {
+			super.setPrecio(super.getPrecio() * this.recargo);
+		}
+
 	}
 
 	// METODOS
@@ -42,10 +41,6 @@ public class Deportes extends Eventos {
 	public String getTipodeporte() {
 		return tipodeporte;
 	}
-
-	/*public void setTipodeporte(String tipodeporte) {
-		this.tipodeporte = tipodeporte;
-	}*/// # se comenta para que solo se pueda setear por constructor
 
 	public boolean isInternacional() {
 		return internacional;
@@ -55,15 +50,17 @@ public class Deportes extends Eventos {
 		this.internacional = internacional;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Deportes [" + "Tipo de deporte: " + tipodeporte + ", Flag internacional: " + internacional
-				 + " ID Entrada: "+ super.getidEntrada()+ "   " +"Duracion: " + super.getDuracion() 
-				+ "  Precio: $" + super.getPrecio() + "]";
+				+ " ID Entrada: " + super.getidEntrada() + "   " + "Duracion: " + super.getDuracion() + "  Precio: $"
+				+ super.getPrecio() + "]";
 	}
 
-	public double bonificaCorporativo(int cantInvitados, String Empresa) {
-		return 1.0;
+	public double bonificaCorporativo(int cantInvitados) {
+		if (cantInvitados > 20) {
+			return super.getPrecio() * 0.85;
+		}
+		return super.getPrecio();
 	}
 }

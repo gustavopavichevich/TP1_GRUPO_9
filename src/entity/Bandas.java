@@ -1,23 +1,27 @@
 package entity;
 
 public class Bandas {
-	//private int idBanda;
+
 	private String nombre;
-	/*public int getIdBanda() {
-		return idBanda;
+
+	// CONSTRUCTOR
+
+	public Bandas() {
 	}
-	public void setIdBanda(int idBanda) {
-		this.idBanda = idBanda;
-	}*/
+
+	// METODOS
+
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
 	@Override
 	public String toString() {
 		return "Bandas [nombre=" + nombre + "]";
 	}
-	
+
 }
