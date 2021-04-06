@@ -10,8 +10,15 @@ public class Actores {
 	public void setIdActor(int idActor) {
 		this.idActor = idActor;
 	}*/
+	
+	
 	public String getNombre() {
 		return nombre;
+	}
+	public Actores(String nombre, String apellido) {
+		super();
+		this.nombre = nombre;
+		this.apellido = apellido;
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;

@@ -2,6 +2,7 @@ package main;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import entity.Actores;
 import entity.Bandas;
 import entity.Deportes;
 
@@ -9,6 +10,7 @@ import entity.Deportes;
 //import entity.Entrada;
 
 import entity.Eventos;
+import entity.Generos;
 import entity.Infantiles;
 //import entity.Show;
 //import util.Gestion;
@@ -32,21 +34,35 @@ public class Principal {
 //
 		//Inicio prueba german recitales
 		//Me falta hacerlo andar, nose por que no me toma los string
-		Eventos evRecital = new Recitales(true,"Rock","Metalica",0);
+		Generos gen = new Generos("rock", false);
+		Bandas ban = new Bandas();
+		ban.setNombre("Metallica");
+		
+		Recitales evRecital = new Recitales(true,gen,ban,0);
 		System.out.println(evRecital.toString());
+		
+		System.out.println(" ");
 		//Fin prueba german recitales
 		
 		
 		System.out.println(evDeporte.toString());
+		System.out.println(" ");
 		
 		
-		Infantiles prueba = new Infantiles(4);
+		Eventos prueba = new Infantiles(4);
 		System.out.println(prueba.toString());
+		System.out.println(" ");
 		
-
-		Teatros pruebat = new Teatros();
+		Generos gen2 = new Generos("drama", true);
+		Actores actor = new Actores("Ricardo","Darin");
+		
+		Teatros pruebat = new Teatros(gen2,actor,1);
 		System.out.println(pruebat.toString());
-		
+		System.out.println(" ");
+		System.out.println("Prueba de INTERFAZ CONSULTAGENERO para Teatro: "+ pruebat.consultarGenero());
+		System.out.println(" ");
+		System.out.println("Prueba de INTERFAZ CONSULTAGENERO para Recital: "+ evRecital.consultarGenero());
+
 		
 		
 		

@@ -9,20 +9,20 @@ public class Infantiles extends Eventos {
 	//private static int cont = 0;
 	
 	//Modif Leo
-	private int precio;
-	private final int precioMayores = 250;
-	private final int  precioMenores = 500;
+	//private int precio;
+	private final double precioMayores = 250;
+	private final double  precioMenores = 500;
 
 	// CONSTRUCTORES
 
 	public Infantiles() {
 	super();
 	if (edad < 8) {
-		this.precio = precioMenores;
+		super.setPrecio(precioMenores);
 	}
 	else
 	{
-		this.precio = precioMayores;
+		super.setPrecio(precioMayores);
 	}
 
 	}
@@ -32,10 +32,10 @@ public class Infantiles extends Eventos {
 	//	this.souvenir = souvenir;
 		this.edad = edad;
 		if (edad < 8) {
-			this.precio = precioMenores;
+			super.setPrecio(precioMenores);
 		}
 		{
-			this.precio = precioMayores;
+			super.setPrecio(precioMayores);
 		}
 
 	}
@@ -68,7 +68,7 @@ public class Infantiles extends Eventos {
 
 	@Override
 	public String toString() {
-		return "Infantil [Flag souvenir: " + souvenir + ", Edad: " + edad + ", Precio: $" + precio  + "]";
+		return "Infantil [Flag souvenir: " + souvenir + ", Edad: " + edad + ", Precio: $" + super.getPrecio()  + "]";
 	}
 	
 	

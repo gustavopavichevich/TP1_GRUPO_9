@@ -1,9 +1,5 @@
 Falta:
-Eliminar DAOS (salvo la interfaz)
-Analizar que se puede hacer con los generos de teatros y recitales ya que la interfaz solo hace un get del genero pero no lo usa para validar ni nada.
-Para recitales modificar el contructor para que calcule el precio segun el tipo de entrada (como hicimos en infantiles), usar como propiedad de esta clase objetos del tipo banda
-Generar una interfaz de entradas para que traiga toda la info del evento y agregar ese metodo en las clases teatro, deportes, infantiles y recital
-Corregir que no este precio como propiedad propia de infantiles
+
 
 Hecho:
 Cristian - Eliminar Gestion
@@ -26,3 +22,8 @@ German - Generar clase actores y bandas (id actor nombre apellido) (id banda nom
 German - Para poder agregarlos como propiedades de actores y bandas en clases teatro y recitales respectivamente
 Leo - Eliminar el valor bool del constructor sobrecargado
 Leo - Eliminar de tostring los valores de las variables constantes
+Leo - Analizar que se puede hacer con los generos de teatros y recitales ya que la interfaz solo hace un get del genero pero no lo usa para validar ni nada.
+Leo - Eliminar DAOS (salvo la interfaz)
+No se quien lo hizo - Para recitales modificar el contructor para que calcule el precio segun el tipo de entrada (como hicimos en infantiles), usar como propiedad de esta clase objetos del tipo banda
+Leo - No se hace, se usa la interfaz de consulta genero solamente . Generar una interfaz de entradas para que traiga toda la info del evento y agregar ese metodo en las clases teatro, deportes, infantiles y recital
+Leo - Corregir que no este precio como propiedad propia de infantiles

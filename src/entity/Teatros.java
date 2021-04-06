@@ -25,6 +25,15 @@ public class Teatros extends Eventos implements IGenerosDAO{
 		this.actores = actores;
 	}
 
+	
+	
+	public Teatros(Generos genero, Actores actores, int cantactores) {
+		super();
+		this.genero = genero;
+		this.actores = actores;
+		this.cantactores = cantactores;
+	}
+
 	public Teatros(String generoteatro,Actores actores, int cantactores) {
 		super();
 		//this.setGenero(generoteatro);
@@ -63,14 +72,15 @@ public class Teatros extends Eventos implements IGenerosDAO{
 	}*/
 
 	@Override
-	public Generos consultarGenero() {
+	public String consultarGenero() {
 		// TODO Auto-generated method stub
-		return this.genero;
-	}
+		return this.genero.getDescripcion();
+				}
+	
 
 	@Override
 	public String toString() {
-		return "Teatro [Genero: " + genero + ", Cant. de actores: " + cantactores + "]";
+		return "Teatros [Genero: " + genero.getDescripcion() + ", Actores: " + actores.getNombre() + " " + actores.getApellido()+ " , Cant. de actores: " + cantactores + "]";
 	}
 	
 

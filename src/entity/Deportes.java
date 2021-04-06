@@ -2,6 +2,7 @@ package entity;
 
 import java.util.Arrays;
 
+import dao.IGenerosDAO;
 import entity.Eventos;
 
 public class Deportes extends Eventos {

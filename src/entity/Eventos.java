@@ -2,7 +2,9 @@ package entity;
 
 import java.util.Date;
 
-public abstract class Eventos {
+import dao.IGenerosDAO;
+
+public abstract class Eventos  {
 
 	private int idEvento;
 	private String titulo;

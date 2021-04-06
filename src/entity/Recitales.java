@@ -16,10 +16,10 @@ public class Recitales extends Eventos implements IGenerosDAO {
 	public Recitales() {
 		super();
 	}
-	public Recitales(boolean vip, String genero, String banda, int cantsoporte) {
+	public Recitales(boolean vip, Generos genero, Bandas banda, int cantsoporte) {
 		super();
-		//this.setGenero(genero);//no lo toma
-		//this.setBandas(banda);//no lo toma
+		this.setGeneros(genero);//no lo toma
+		this.setBandas(banda);//no lo toma
 		this.vip = vip;
 		this.cantsoporte = cantsoporte;
 		
@@ -54,11 +54,18 @@ public class Recitales extends Eventos implements IGenerosDAO {
 		return generos.getDescripcion();
 	}
 
-	public void setGenero(String genero) {
-		this.generos.setDescripcion(genero);
-	}
+
 
 	
+	public Generos getGeneros() {
+		return generos;
+	}
+	public void setGeneros(Generos generos) {
+		this.generos = generos;
+	}
+	public void setBandas(Bandas bandas) {
+		this.bandas = bandas;
+	}
 	public int getCantsoporte() {
 		return cantsoporte;
 	}
@@ -76,14 +83,14 @@ public class Recitales extends Eventos implements IGenerosDAO {
 	}*/
 
 	@Override
-	public Generos consultarGenero() {
-		return this.generos;
+	public String consultarGenero() {
+		return this.generos.getDescripcion();
 		// TODO Auto-generated method stub
 		
 	}
 	@Override
 	public String toString() {
-		return "Recitales [Flag vip: " + vip + ", Genero: " + generos + ", Bandas: " + bandas + ", cantsoporte: " + cantsoporte
+		return "Recitales [Flag vip: " + vip + ", Genero: " + generos.getDescripcion() + ", Bandas: " + bandas.getNombre() + ", cantsoporte: " + cantsoporte
 				 + " ID entrada: "+ super.getidEntrada()+ "   " +"Duracion: " + super.getDuracion() 
 				+ "  Precio: $" + super.getPrecio() + "]";
 	}
