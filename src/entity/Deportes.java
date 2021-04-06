@@ -2,16 +2,16 @@ package entity;
 
 import java.util.Arrays;
 
-import entity.Evento;
+import entity.Eventos;
 
-public class Deportes extends Evento {
+public class Deportes extends Eventos {
 	
 	private final String[] tipoDeportes = {"Futbol","Rugby","Hockey"};
 	private final int[] precioDeportes = {300,450,380};
 	private final double recargo = 1.3;
 	private String tipodeporte;
 	private boolean internacional;
-	private static int cont = 0;
+	//private static int cont = 0;
 
 	// CONSTRUCTORES
 
@@ -56,13 +56,13 @@ public class Deportes extends Evento {
 		this.internacional = internacional;
 	}
 
-	public static int getCont() {
+	/*public static int getCont() {
 		return cont;
 	}
 
 	public static void setCont(int cont) {
 		Deportes.cont = cont;
-	}
+	}*/
 
 	@Override
 	public String toString() {

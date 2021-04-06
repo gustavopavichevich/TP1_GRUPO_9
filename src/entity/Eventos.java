@@ -2,7 +2,7 @@ package entity;
 
 import java.util.Date;
 
-public abstract class Evento {
+public abstract class Eventos {
 
 	private int idEvento;
 	private String titulo;
@@ -18,12 +18,12 @@ public abstract class Evento {
 
 	// CONSTRUCTORES
 
-	public Evento() {
+	public Eventos() {
 		//super();
 		this.idEntrada = ++contEntrada;//CJB Lo puse para probar
 	}
 
-	public Evento(int idevento, String titulo, String tipoevento, Date fecha, int duracion, String tipoEntrada, int valor) {
+	public Eventos(int idevento, String titulo, String tipoevento, Date fecha, int duracion, String tipoEntrada, int valor) {
 		//super(tipoEntrada, valor);
 		this.idEvento = idevento;
 		this.titulo = titulo;
