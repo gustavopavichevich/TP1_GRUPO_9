@@ -38,7 +38,7 @@ public class Principal {
 		Bandas ban = new Bandas();
 		ban.setNombre("Metallica");
 		
-		Recitales evRecital = new Recitales(true,gen,ban,0);
+		Recitales evRecital = new Recitales(true,gen,ban,0, fecha);
 		System.out.println(evRecital.toString());
 		
 		System.out.println(" ");
@@ -59,11 +59,12 @@ public class Principal {
 		Teatros pruebat = new Teatros(gen2,actor,1);
 		System.out.println(pruebat.toString());
 		System.out.println(" ");
-		System.out.println("Prueba de INTERFAZ CONSULTAGENERO para Teatro: "+ pruebat.consultarGenero());
+		System.out.println("Prueba de INTERFAZ ConsultaGenero de IGENEROSDAO para Teatro: "+ pruebat.consultarGenero());
 		System.out.println(" ");
-		System.out.println("Prueba de INTERFAZ CONSULTAGENERO para Recital: "+ evRecital.consultarGenero());
+		System.out.println("Prueba de INTERFAZ ConsultaGenero de IGENEROSDAO de para Recital: "+ evRecital.consultarGenero());
+		System.out.println(" ");
+		System.out.println("Prueba de INTERFAZ ConsultarDatosEntrada de IENTRADA para Recital: "+ evRecital.ConsultarDatosEntrada());
 
-		
 		
 		
 		

@@ -1,8 +1,11 @@
 package entity;
+import java.util.Date;
+
+import dao.IEntrada;
 import dao.IGenerosDAO;
 import entity.Eventos;
 
-public class Recitales extends Eventos implements IGenerosDAO {
+public class Recitales extends Eventos implements IGenerosDAO,IEntrada {
 
 	private boolean vip;
 	public Generos generos;
@@ -16,12 +19,15 @@ public class Recitales extends Eventos implements IGenerosDAO {
 	public Recitales() {
 		super();
 	}
-	public Recitales(boolean vip, Generos genero, Bandas banda, int cantsoporte) {
+	public Recitales(boolean vip, Generos genero, Bandas banda, int cantsoporte, Date fecha) {
 		super();
 		this.setGeneros(genero);//no lo toma
 		this.setBandas(banda);//no lo toma
 		this.vip = vip;
 		this.cantsoporte = cantsoporte;
+		super.setTipoEvento("Recital");
+		super.setTitulo(banda.getNombre());
+		super.setFecha(fecha);
 		
 		if(vip==true) {
 			super.setPrecio(1500);
@@ -93,6 +99,11 @@ public class Recitales extends Eventos implements IGenerosDAO {
 		return "Recitales [Flag vip: " + vip + ", Genero: " + generos.getDescripcion() + ", Bandas: " + bandas.getNombre() + ", cantsoporte: " + cantsoporte
 				 + " ID entrada: "+ super.getidEntrada()+ "   " +"Duracion: " + super.getDuracion() 
 				+ "  Precio: $" + super.getPrecio() + "]";
+	}
+	@Override
+	public String ConsultarDatosEntrada() {
+		// TODO Auto-generated method stub
+		return "Genero: "+ this.getGenero()+ ", Tipo de Evento: " + super.getTipoEvento() + ", Duracion: " + super.getDuracion() + ", ID Entrada: " + super.getidEntrada() + ", ID Evento: " + super.getIdEvento() + ", Precio: "+ super.getPrecio() + ", Titulo: "+ super.getTitulo() + ", Fecha: "+super.getFecha();
 	}
 
 }
