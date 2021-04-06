@@ -2,9 +2,7 @@ package entity;
 
 import java.util.Date;
 
-import entity.Entrada;
-
-public class Evento extends Entrada {
+public abstract class Evento {
 
 	private int idEvento;
 	private String titulo;
@@ -15,20 +13,24 @@ public class Evento extends Entrada {
 	// private int mes;
 	// private int anio;
 	private int duracion;
+	private int idEntrada;
+	private static int contEntrada = 0;
 
 	// CONSTRUCTORES
 
 	public Evento() {
-		super();
+		//super();
+		this.idEntrada = ++contEntrada;//CJB Lo puse para probar
 	}
 
 	public Evento(int idevento, String titulo, String tipoevento, Date fecha, int duracion, String tipoEntrada, int valor) {
-		super(tipoEntrada, valor);
+		//super(tipoEntrada, valor);
 		this.idEvento = idevento;
 		this.titulo = titulo;
 		this.tipoEvento = tipoevento;
 		this.fecha = fecha;
 		this.duracion = duracion;
+		this.idEntrada = ++contEntrada;
 		
 	}
 
@@ -50,6 +52,10 @@ public class Evento extends Entrada {
 	 * public void setAnio(int año) { this.anio = año; }
 	 */
 
+	public int getidEntrada() {
+		return idEntrada;
+	}
+	
 	public int getDuracion() {
 		return duracion;
 	}
@@ -71,7 +77,7 @@ public class Evento extends Entrada {
 	 return precio;
 	 }
 	
-	 public void setPrecio(int precio) {
+	 public void setPrecio(double precio) {
 	 this.precio = precio;
 	 }
 

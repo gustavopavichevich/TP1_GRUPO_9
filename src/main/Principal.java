@@ -2,20 +2,22 @@ package main;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import dao.EventoDAO;
-import entity.Entrada;
+import entity.Deportes;
+
+//import dao.EventoDAO;
+//import entity.Entrada;
 
 import entity.Evento;
 import entity.Infantil;
-import entity.Show;
-import util.Gestion;
+//import entity.Show;
+//import util.Gestion;
 
 public class Principal {
 
 	public static void main(String[] args) {
-		Gestion gestion = new Gestion();
-		Show show = new Show();
-		Evento evento = new Evento();
+		//Gestion gestion = new Gestion();
+		//Show show = new Show();
+		Evento evDeporte = new Deportes(true,"Futbol");
 	//	EventoDAO DAO = new EventoDAO();
 		
 		Date fecha = new Date();
@@ -26,7 +28,7 @@ public class Principal {
 		
 //
 		
-		
+		System.out.println(evDeporte.toString());
 		
 		
 //		Infantil prueba = new Infantil();
@@ -40,7 +42,7 @@ public class Principal {
 		
 		
 		
-		
+	/*	
 		
 		
 	show.setIdShow(4);
@@ -66,7 +68,7 @@ System.out.println("Id de Entrada: "+ evento.getIdentrada());
 System.out.println(("Tipo de entrada: "+ evento.getTipoEntrada()));
 System.out.println(("Valor de entrada: "+ evento.getValor()));
 
-
+*/
 
 //		evento.setFecha(fecha);
 //		show.setEvento(evento);
