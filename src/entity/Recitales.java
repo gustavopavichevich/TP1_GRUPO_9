@@ -80,14 +80,6 @@ public class Recitales extends Eventos implements IGenerosDAO,IEntrada {
 		this.cantsoporte = cantsoporte;
 	}
 
-	/*public static int getCont() {
-		return cont;
-	}
-
-	public static void setCont(int cont) {
-		Recitales.cont = cont;
-	}*/
-
 	@Override
 	public String consultarGenero() {
 		return this.generos.getDescripcion();
@@ -106,4 +98,7 @@ public class Recitales extends Eventos implements IGenerosDAO,IEntrada {
 		return "Genero: "+ this.getGenero()+ ", Tipo de Evento: " + super.getTipoEvento() + ", Duracion: " + super.getDuracion() + ", ID Entrada: " + super.getidEntrada() + ", ID Evento: " + super.getIdEvento() + ", Precio: "+ super.getPrecio() + ", Titulo: "+ super.getTitulo() + ", Fecha: "+super.getFecha();
 	}
 
+	public double bonificaCorporativo(int cantInvitados, String Empresa) {
+		return 1.0;
+	}
 }

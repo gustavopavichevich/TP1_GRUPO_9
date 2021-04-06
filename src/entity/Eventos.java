@@ -11,9 +11,6 @@ public abstract class Eventos  {
 	private String tipoEvento;
 	private double precio;
 	private Date fecha;// #German: esto lo agrego para reemplazar los int de dia,mes y año
-	// private int dia;
-	// private int mes;
-	// private int anio;
 	private int duracion;
 	private int idEntrada;
 	private static int contEntrada = 0;
@@ -21,12 +18,10 @@ public abstract class Eventos  {
 	// CONSTRUCTORES
 
 	public Eventos() {
-		//super();
-		this.idEntrada = ++contEntrada;//CJB Lo puse para probar
+		this.idEntrada = ++contEntrada;
 	}
 
 	public Eventos(int idevento, String titulo, String tipoevento, Date fecha, int duracion, String tipoEntrada, int valor) {
-		//super(tipoEntrada, valor);
 		this.idEvento = idevento;
 		this.titulo = titulo;
 		this.tipoEvento = tipoevento;
@@ -37,22 +32,6 @@ public abstract class Eventos  {
 	}
 
 	// METODOS
-
-	// agregar variable fecha????#pavi: consideré que era necesario ingresar la
-	// fecha porque lo menciona en práctica
-	/*
-	 * public int getDia() { return dia; }
-	 * 
-	 * public void setDia(int dia) { this.dia = dia; }
-	 * 
-	 * public int getMes() { return mes; }
-	 * 
-	 * public void setMes(int mes) { this.mes = mes; }
-	 * 
-	 * public int getAnio() { return anio; }
-	 * 
-	 * public void setAnio(int año) { this.anio = año; }
-	 */
 
 	public int getidEntrada() {
 		return idEntrada;
@@ -82,14 +61,6 @@ public abstract class Eventos  {
 	 public void setPrecio(double precio) {
 	 this.precio = precio;
 	 }
-
-	// public int getTiempo() {
-	// return tiempo;
-	// }
-	//
-	// public void setTiempo(int tiempo) {
-	// this.tiempo = tiempo;
-	// }
 
 	public int getIdEvento() {
 		return idEvento;
@@ -121,6 +92,8 @@ public abstract class Eventos  {
 				+ ", duracion=" + duracion + "]";
 	}
 	
-	
+	// metodo para que cada tipo de evento pueda aplicar distintos descuentos en base 
+	// a la cantidad de invitados y a la empresa que lo contrata
+	public abstract double bonificaCorporativo(int cantInvitados, String Empresa);
 
 }

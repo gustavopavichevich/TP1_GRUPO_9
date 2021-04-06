@@ -80,8 +80,12 @@ public class Teatros extends Eventos implements IGenerosDAO{
 
 	@Override
 	public String toString() {
-		return "Teatros [Genero: " + genero.getDescripcion() + ", Actores: " + actores.getNombre() + " " + actores.getApellido()+ " , Cant. de actores: " + cantactores + "]";
+		return "Teatros [Genero: " + genero.getDescripcion() + ", Actores: " + actores.getNombre() + " " 
+		+ actores.getApellido()+ " , Cant. de actores: " + cantactores + "]";
 	}
 	
+	public double bonificaCorporativo(int cantInvitados, String Empresa) {
+		return 1.0;
+	}
 
 }

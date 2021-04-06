@@ -71,6 +71,8 @@ public class Infantiles extends Eventos {
 		return "Infantil [Flag souvenir: " + souvenir + ", Edad: " + edad + ", Precio: $" + super.getPrecio()  + "]";
 	}
 	
-	
+	public double bonificaCorporativo(int cantInvitados, String Empresa) {
+		return 1.0;
+	}
 
 }

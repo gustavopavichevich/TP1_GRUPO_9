@@ -1,7 +1,6 @@
 package entity;
 
 import java.util.Arrays;
-
 import dao.IGenerosDAO;
 import entity.Eventos;
 
@@ -12,7 +11,6 @@ public class Deportes extends Eventos {
 	private final double recargo = 1.3;
 	private String tipodeporte;
 	private boolean internacional;
-	//private static int cont = 0;
 
 	// CONSTRUCTORES
 
@@ -57,13 +55,6 @@ public class Deportes extends Eventos {
 		this.internacional = internacional;
 	}
 
-	/*public static int getCont() {
-		return cont;
-	}
-
-	public static void setCont(int cont) {
-		Deportes.cont = cont;
-	}*/
 
 	@Override
 	public String toString() {
@@ -72,4 +63,7 @@ public class Deportes extends Eventos {
 				+ "  Precio: $" + super.getPrecio() + "]";
 	}
 
+	public double bonificaCorporativo(int cantInvitados, String Empresa) {
+		return 1.0;
+	}
 }
