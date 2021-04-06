@@ -1,37 +1,50 @@
 
 package entity;
 
-import dao.IGeneroDAO;
+import dao.IGenerosDAO;
 
-public class Teatro extends Evento implements IGeneroDAO{
+public class Teatros extends Eventos implements IGenerosDAO{
 
-	private Genero genero;
+	private Generos genero;
+	private Actores actores;
 	private int cantactores;
-	private static int cont = 0;
+	//private static int cont = 0;
 
 
 	// CONSTRUCTOR
 
-	public Teatro() {
+	public Teatros() {
 		super();
 	}
 
-	public Teatro(String generoteatro, int cantactores) {
+	public Actores getActores() {
+		return actores;
+	}
+
+	public void setActores(Actores actores) {
+		this.actores = actores;
+	}
+
+	public Teatros(String generoteatro,Actores actores, int cantactores) {
 		super();
 		this.setCantactores(cantactores);
+		this.setActores(actores);
 
 	}
 
 	// METODOS
 
-	public Genero getGenero() {
+	public Generos getGenero() {
 		return genero;
 	}
 
-	public void setGenero(Genero genero) {
+	public void setGenero(Generos genero) {
 		this.genero = genero;
 	}
 
+	
+	
+	
 	public int getCantactores() {
 		return cantactores;
 	}
@@ -40,16 +53,16 @@ public class Teatro extends Evento implements IGeneroDAO{
 		this.cantactores = cantactores;
 	}
 
-	public static int getCont() {
+	/*public static int getCont() {
 		return cont;
 	}
 
 	public static void setCont(int cont) {
-		Teatro.cont = cont;
-	}
+		Teatros.cont = cont;
+	}*/
 
 	@Override
-	public Genero consultarGenero() {
+	public Generos consultarGenero() {
 		// TODO Auto-generated method stub
 		return this.genero;
 	}
