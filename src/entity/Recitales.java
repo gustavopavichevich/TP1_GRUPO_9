@@ -83,9 +83,9 @@ public class Recitales extends Eventos implements IGenerosDAO {
 	}
 	@Override
 	public String toString() {
-		return "Recitales [vip=" + vip + ", genero=" + generos + ", bandas=" + bandas + ", cantsoporte=" + cantsoporte
-				 + "ID ENTRADA: "+ super.getidEntrada()+ "   " +"Duracion: " + super.getDuracion() 
-				+ "  Precio: $" + super.getPrecio();
+		return "Recitales [Flag vip: " + vip + ", Genero: " + generos + ", Bandas: " + bandas + ", cantsoporte: " + cantsoporte
+				 + " ID entrada: "+ super.getidEntrada()+ "   " +"Duracion: " + super.getDuracion() 
+				+ "  Precio: $" + super.getPrecio() + "]";
 	}
 
 }

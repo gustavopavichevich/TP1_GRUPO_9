@@ -66,9 +66,9 @@ public class Deportes extends Eventos {
 
 	@Override
 	public String toString() {
-		return "Deportes บบบ" + ", tipodeporte=" + tipodeporte + ", internacional=" + internacional
-				 + "ID ENTRADA: "+ super.getidEntrada()+ "   " +"Duracion: " + super.getDuracion() 
-				+ "  Precio: $" + super.getPrecio();
+		return "Deportes [" + "Tipo de deporte: " + tipodeporte + ", Flag internacional: " + internacional
+				 + " ID Entrada: "+ super.getidEntrada()+ "   " +"Duracion: " + super.getDuracion() 
+				+ "  Precio: $" + super.getPrecio() + "]";
 	}
 
 }

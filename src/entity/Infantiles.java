@@ -27,9 +27,9 @@ public class Infantiles extends Eventos {
 
 	}
 
-	public Infantiles(boolean souvenir, int edad) {
+	public Infantiles(int edad) {
 		super();
-		this.souvenir = souvenir;
+	//	this.souvenir = souvenir;
 		this.edad = edad;
 		if (edad < 8) {
 			this.precio = precioMenores;
@@ -68,8 +68,7 @@ public class Infantiles extends Eventos {
 
 	@Override
 	public String toString() {
-		return "Infantil [souvenir=" + souvenir + ", edad=" + edad + ", precio=" + precio + ", precioMayores="
-				+ precioMayores + ", precioMenores=" + precioMenores + "]";
+		return "Infantil [Flag souvenir: " + souvenir + ", Edad: " + edad + ", Precio: $" + precio  + "]";
 	}
 	
 	

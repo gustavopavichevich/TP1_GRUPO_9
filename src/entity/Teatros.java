@@ -27,6 +27,7 @@ public class Teatros extends Eventos implements IGenerosDAO{
 
 	public Teatros(String generoteatro,Actores actores, int cantactores) {
 		super();
+		//this.setGenero(generoteatro);
 		this.setCantactores(cantactores);
 		this.setActores(actores);
 
@@ -69,7 +70,7 @@ public class Teatros extends Eventos implements IGenerosDAO{
 
 	@Override
 	public String toString() {
-		return "Teatro [genero=" + genero + ", cantactores=" + cantactores + "]";
+		return "Teatro [Genero: " + genero + ", Cant. de actores: " + cantactores + "]";
 	}
 	
 

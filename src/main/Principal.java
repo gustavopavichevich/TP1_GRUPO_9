@@ -13,6 +13,7 @@ import entity.Infantiles;
 //import entity.Show;
 //import util.Gestion;
 import entity.Recitales;
+import entity.Teatros;
 
 public class Principal {
 
@@ -39,11 +40,12 @@ public class Principal {
 		System.out.println(evDeporte.toString());
 		
 		
-//		Infantil prueba = new Infantil();
-	//	System.out.println(prueba.toString());
+		Infantiles prueba = new Infantiles(4);
+		System.out.println(prueba.toString());
 		
 
-		
+		Teatros pruebat = new Teatros();
+		System.out.println(pruebat.toString());
 		
 		
 		
