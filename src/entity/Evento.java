@@ -9,7 +9,7 @@ public class Evento extends Entrada {
 	private int idEvento;
 	private String titulo;
 	private String tipoEvento;
-	// int precio; #pavi:esta propiedad es propia de la entrada
+	private double precio;
 	private Date fecha;// #German: esto lo agrego para reemplazar los int de dia,mes y año
 	// private int dia;
 	// private int mes;
@@ -66,14 +66,14 @@ public class Evento extends Entrada {
 		this.duracion = duracion;
 	}
 
-	// #pavi:quito este GET&SET para trasladarlo a la entrada.
-	// public int getPrecio() {
-	// return precio;
-	// }
-	//
-	// public void setPrecio(int precio) {
-	// this.precio = precio;
-	// }
+	
+	 public double getPrecio() {
+	 return precio;
+	 }
+	
+	 public void setPrecio(int precio) {
+	 this.precio = precio;
+	 }
 
 	// public int getTiempo() {
 	// return tiempo;
