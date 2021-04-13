@@ -1,9 +1,9 @@
 package resolucion;
 
-public class entradas {
+public class entradas  implements Comparable<entradas> {
 	private String nombre;
 	private String apellido;
-	private String dni;
+	private int dni;
 	private String direccion;
 	private String genero;
 	private String localidad;
@@ -11,7 +11,7 @@ public class entradas {
 	
 	
 	
-	public entradas(String nombre, String apellido, String dni, String direccion, String genero, String localidad,
+	public entradas(String nombre, String apellido, int dni, String direccion, String genero, String localidad,
 			String provincia) {
 		super();
 		this.nombre = nombre;
@@ -34,10 +34,10 @@ public class entradas {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
-	public String getDni() {
+	public int getDni() {
 		return dni;
 	}
-	public void setDni(String dni) {
+	public void setDni(int dni) {
 		this.dni = dni;
 	}
 	public String getDireccion() {
@@ -69,13 +69,14 @@ public class entradas {
 		return "entradas [nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + ", direccion=" + direccion
 				+ ", genero=" + genero + ", localidad=" + localidad + ", provincia=" + provincia + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((apellido == null) ? 0 : apellido.hashCode());
 		result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
-		result = prime * result + ((dni == null) ? 0 : dni.hashCode());
+		result = prime * result + dni;
 		result = prime * result + ((genero == null) ? 0 : genero.hashCode());
 		result = prime * result + ((localidad == null) ? 0 : localidad.hashCode());
 		result = prime * result + ((nombre == null) ? 0 : nombre.hashCode());
@@ -101,10 +102,7 @@ public class entradas {
 				return false;
 		} else if (!direccion.equals(other.direccion))
 			return false;
-		if (dni == null) {
-			if (other.dni != null)
-				return false;
-		} else if (!dni.equals(other.dni))
+		if (dni != other.dni)
 			return false;
 		if (genero == null) {
 			if (other.genero != null)
@@ -127,6 +125,19 @@ public class entradas {
 		} else if (!provincia.equals(other.provincia))
 			return false;
 		return true;
+	}
+	@Override
+	public int compareTo(entradas o) {
+		// TODO Auto-generated method stub
+		//ORDENAMIENTO por DNI de > a <
+		if(o.dni == this.dni)
+			return 0;
+		
+		if (o.dni<this.dni)
+		{
+			return 1;
+		}		
+		return -1;
 	}
 
 
