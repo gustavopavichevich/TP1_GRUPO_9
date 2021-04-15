@@ -1,6 +1,6 @@
-package resolucion;
+package entity;
 
-public class entradas  implements Comparable<entradas> {
+public class Clientes  implements Comparable<Clientes> {
 	private String nombre;
 	private String apellido;
 	private int dni;
@@ -11,7 +11,7 @@ public class entradas  implements Comparable<entradas> {
 	
 	
 	
-	public entradas(String nombre, String apellido, int dni, String direccion, String genero, String localidad,
+	public Clientes(String nombre, String apellido, int dni, String direccion, String genero, String localidad,
 			String provincia) {
 		super();
 		this.nombre = nombre;
@@ -91,7 +91,7 @@ public class entradas  implements Comparable<entradas> {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		entradas other = (entradas) obj;
+		Clientes other = (Clientes) obj;
 		if (apellido == null) {
 			if (other.apellido != null)
 				return false;
@@ -127,7 +127,7 @@ public class entradas  implements Comparable<entradas> {
 		return true;
 	}
 	@Override
-	public int compareTo(entradas o) {
+	public int compareTo(Clientes o) {
 		// TODO Auto-generated method stub
 		//ORDENAMIENTO por DNI de > a <
 		if(o.dni == this.dni)
