@@ -1,6 +1,8 @@
 package entity;
 
 public class Clientes  implements Comparable<Clientes> {
+	
+	private int id_cliente; //Pablo
 	private String nombre;
 	private String apellido;
 	private int dni;
@@ -11,9 +13,10 @@ public class Clientes  implements Comparable<Clientes> {
 	
 	
 	
-	public Clientes(String nombre, String apellido, int dni, String direccion, String genero, String localidad,
+	public Clientes(int id_cliente, String nombre, String apellido, int dni, String direccion, String genero, String localidad,
 			String provincia) {
 		super();
+		this.id_cliente = id_cliente;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.dni = dni;
@@ -21,6 +24,13 @@ public class Clientes  implements Comparable<Clientes> {
 		this.genero = genero;
 		this.localidad = localidad;
 		this.provincia = provincia;
+	}
+	
+	public int getId_cliente() {
+		return id_cliente;
+	}
+	public void setId_cliente(int id_cliente) {
+		this.id_cliente = id_cliente;
 	}
 	public String getNombre() {
 		return nombre;
@@ -64,6 +74,8 @@ public class Clientes  implements Comparable<Clientes> {
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
+	
+	
 	@Override
 	public String toString() {
 		return "entradas [nombre=" + nombre + ", apellido=" + apellido + ", dni=" + dni + ", direccion=" + direccion
@@ -74,6 +86,7 @@ public class Clientes  implements Comparable<Clientes> {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + id_cliente;
 		result = prime * result + ((apellido == null) ? 0 : apellido.hashCode());
 		result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
 		result = prime * result + dni;
@@ -139,6 +152,7 @@ public class Clientes  implements Comparable<Clientes> {
 		}		
 		return -1;
 	}
+	
 
 
 

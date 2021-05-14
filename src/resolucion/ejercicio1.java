@@ -17,11 +17,11 @@ public class ejercicio1 {
 		
 		//iniciado por german medina
 		
-		Clientes p1 = new Clientes("Belen", "Sanchez", 11111111,"arenales","femenino","san miguel","buenos aires");
-		Clientes p2 = new Clientes("Alberto", "Rodriguez", 22222222,"arenales","femenino","san miguel","buenos aires");
-		Clientes p3 = new Clientes("Rodrigo", "Fernandez", 33333333,"arenales","femenino","san miguel","buenos aires");
-		Clientes p4 = new Clientes("Pedro", "Iba�ez", 444444444,"arenales","femenino","san miguel","buenos aires");
-		Clientes p5= new Clientes("Mariano", "Martinez", 555555,"arenales","femenino","san miguel","buenos aires");
+		Clientes p1 = new Clientes(00001,"Belen", "Sanchez", 11111111,"arenales","femenino","san miguel","buenos aires");
+		Clientes p2 = new Clientes(00002,"Alberto", "Rodriguez", 22222222,"arenales","femenino","san miguel","buenos aires");
+		Clientes p3 = new Clientes(00003,"Rodrigo", "Fernandez", 33333333,"arenales","femenino","san miguel","buenos aires");
+		Clientes p4 = new Clientes(00004,"Pedro", "Iba�ez", 444444444,"arenales","femenino","san miguel","buenos aires");
+		Clientes p5= new Clientes(00005,"Mariano", "Martinez", 555555,"arenales","femenino","san miguel","buenos aires");
 		
 		Entradas e1= new Entradas("La Renga", 500.0, fecha, 3);
 		Entradas e2= new Entradas("Piñon Fijo",200.0, fecha, 2);
