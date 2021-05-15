@@ -103,7 +103,7 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 
 	@Override
 	public String toString() {
-		return "Recitales [vip=" + vip + ", generos=" + generos + ", banda=" + banda + ", bandaSoporte1="
+		return "Recitales [vip=" + vip + ", generos=" + this.generos.getDescripcion() + ", banda=" + banda + ", bandaSoporte1="
 				+ bandaSoporte1 + ", bandaSoporte2=" + bandaSoporte2 + ", cantsoporte=" + cantsoporte + "]";
 	}
 

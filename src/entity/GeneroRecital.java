@@ -1,6 +1,6 @@
 package entity;
 
-public class GeneroRecital {
+public class GeneroRecital  {
 
 	private String descripcion;
 

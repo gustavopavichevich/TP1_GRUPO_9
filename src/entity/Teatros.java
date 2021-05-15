@@ -5,7 +5,7 @@ import dao.IGenerosDAO;
 
 public class Teatros extends Eventos implements IGenerosDAO {
 
-	private GeneroRecital genero;
+	private GeneroTeatro genero;
 	private Actores actor1;
 	private Actores actor2;
 	private Actores actor3;
@@ -17,7 +17,7 @@ public class Teatros extends Eventos implements IGenerosDAO {
 		super();
 	}
 
-	public Teatros(GeneroRecital genero, Actores actor1, Actores actor2, Actores actor3, int cantactores) {
+	public Teatros(GeneroTeatro genero, Actores actor1, Actores actor2, Actores actor3, int cantactores) {
 		super();
 		this.genero = genero;
 		this.actor1 = actor1;
@@ -58,11 +58,11 @@ public class Teatros extends Eventos implements IGenerosDAO {
 		this.actor3 = actores3;
 	}
 
-	public GeneroRecital getGenero() {
+	public GeneroTeatro getGenero() {
 		return genero;
 	}
 
-	public void setGenero(GeneroRecital genero) {
+	public void setGenero(GeneroTeatro genero) {
 		this.genero = genero;
 	}
 
@@ -82,7 +82,7 @@ public class Teatros extends Eventos implements IGenerosDAO {
 
 	@Override
 	public String toString() {
-		return "Teatros [genero=" + genero + ", actor1=" + actor1 + ", actor2=" + actor2 + ", actor3=" + actor3
+		return "Teatros [genero=" + this.genero.getDescripcion() + ", actor1=" + actor1 + ", actor2=" + actor2 + ", actor3=" + actor3
 				+ ", cantactores=" + cantactores + "]";
 	}
 

@@ -1,37 +1,28 @@
 package entity;
 
-public class Clientes  implements Comparable<Clientes> {
+public class Clientes extends GeneroS implements Comparable<Clientes> {
 	
-	private int id_cliente; //Pablo
+
 	private String nombre;
 	private String apellido;
 	private int dni;
 	private String direccion;
-	private String genero;
-	private String localidad;
-	private String provincia;
+	GeneroS genero;
+	Localidad localidad;
+	Provincia provincia;
 	
 	
 	
-	public Clientes(int id_cliente, String nombre, String apellido, int dni, String direccion, String genero, String localidad,
-			String provincia) {
-		super();
-		this.id_cliente = id_cliente;
+	public Clientes(String nombre, String apellido, int dni, String direccion,String genero, String localidad,String provincia) {
+		super(genero);
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.dni = dni;
 		this.direccion = direccion;
-		this.genero = genero;
-		this.localidad = localidad;
-		this.provincia = provincia;
 	}
 	
-	public int getId_cliente() {
-		return id_cliente;
-	}
-	public void setId_cliente(int id_cliente) {
-		this.id_cliente = id_cliente;
-	}
+
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -56,24 +47,8 @@ public class Clientes  implements Comparable<Clientes> {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	public String getGenero() {
-		return genero;
-	}
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-	public String getLocalidad() {
-		return localidad;
-	}
-	public void setLocalidad(String localidad) {
-		this.localidad = localidad;
-	}
-	public String getProvincia() {
-		return provincia;
-	}
-	public void setProvincia(String provincia) {
-		this.provincia = provincia;
-	}
+
+	
 	
 	
 	@Override
@@ -86,7 +61,6 @@ public class Clientes  implements Comparable<Clientes> {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + id_cliente;
 		result = prime * result + ((apellido == null) ? 0 : apellido.hashCode());
 		result = prime * result + ((direccion == null) ? 0 : direccion.hashCode());
 		result = prime * result + dni;

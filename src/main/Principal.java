@@ -32,7 +32,7 @@ public class Principal {
 		System.out.println(prueba.toString());
 		System.out.println(" ");
 		
-		GeneroRecital gen2 = new GeneroRecital("drama");
+		GeneroTeatro gen2 = new GeneroTeatro("drama");
 		Actores actor1 = new Actores("Ricardo","Darin");
 		Actores actor2 = new Actores("Francella","Guillermo");
 		Actores actor3 = new Actores("Minujin","Juan");
