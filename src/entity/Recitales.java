@@ -9,11 +9,12 @@ import entity.Eventos;
 public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 
 	private boolean vip;
-	public Generos generos;
+	public GeneroRecital generos;
 	public Bandas banda;
 	public Bandas bandaSoporte1;
 	public Bandas bandaSoporte2;
 	private int cantsoporte;
+//	private Date fecha;
 
 	// CONTRUCTORES
 
@@ -21,10 +22,12 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 		super();
 	}
 
-	public Recitales(boolean vip, Generos genero, Bandas banda,Bandas bandaSoporte1,Bandas bandaSoporte2, int cantsoporte, Date fecha) {
+	public Recitales(boolean vip, GeneroRecital gen, Bandas banda,Bandas bandaSoporte1,Bandas bandaSoporte2, int cantsoporte, Date fecha) {
 		super();
-		this.setGeneros(genero);
+		this.setGeneros(gen);
 		this.setBanda(banda);
+		this.setBandaSoporte1(bandaSoporte1);
+		this.setBandaSoporte2(bandaSoporte2);
 		this.vip = vip;
 		this.cantsoporte = cantsoporte;
 		super.setTipoEvento("Recital");
@@ -76,11 +79,11 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 		return generos.getDescripcion();
 	}
 
-	public Generos getGeneros() {
+	public GeneroRecital getGeneros() {
 		return generos;
 	}
 
-	public void setGeneros(Generos generos) {
+	public void setGeneros(GeneroRecital generos) {
 		this.generos = generos;
 	}
 

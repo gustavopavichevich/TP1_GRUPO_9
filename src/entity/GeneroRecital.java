@@ -1,18 +1,17 @@
 package entity;
 
-public class Generos {
+public class GeneroRecital {
 
 	private String descripcion;
-	private boolean teatro;
 
 	// CONSTRUCTORES
 
-	public Generos() {
+	public GeneroRecital() {
 	}
 
-	public Generos(String descripcion, boolean teatro) {
+	public GeneroRecital(String descripcion) {
 
-		if (teatro == false) {
+		
 
 			switch (descripcion) {
 			case "rock":
@@ -37,25 +36,11 @@ public class Generos {
 				this.descripcion = "Error en genero";
 				break;
 			}
-		} else {
-
-			switch (descripcion) {
-			case "drama":
-				this.descripcion = descripcion;
-				break;
-			case "teatro":
-				this.descripcion = descripcion;
-				break;
-			case "comedia":
-				this.descripcion = descripcion;
-				break;
-			default:
-				this.descripcion = "Error en genero";
-				break;
-			}
+		
+	
 		}
 
-	}
+	
 
 	// METODOS
 
@@ -67,11 +52,6 @@ public class Generos {
 		this.descripcion = descripcion;
 	}
 
-	public boolean isTeatro() {
-		return teatro;
-	}
-
-	public void setTeatro(boolean teatro) {
-		this.teatro = teatro;
-	}
+	
+	
 }

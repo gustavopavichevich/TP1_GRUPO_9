@@ -11,7 +11,7 @@ public class Principal {
 		
 		Date fecha = new Date();
 
-		Generos gen = new Generos("rock", false);
+		GeneroRecital gen = new GeneroRecital("rock");
 		Bandas ban1 = new Bandas();
 		Bandas ban2 = new Bandas();
 		Bandas ban3 = new Bandas();
@@ -32,7 +32,7 @@ public class Principal {
 		System.out.println(prueba.toString());
 		System.out.println(" ");
 		
-		Generos gen2 = new Generos("drama", true);
+		GeneroRecital gen2 = new GeneroRecital("drama");
 		Actores actor1 = new Actores("Ricardo","Darin");
 		Actores actor2 = new Actores("Francella","Guillermo");
 		Actores actor3 = new Actores("Minujin","Juan");
