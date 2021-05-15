@@ -1,5 +1,5 @@
 package entity;
-
+//LeoPrueba
 import java.util.Date;
 
 public abstract class Eventos {

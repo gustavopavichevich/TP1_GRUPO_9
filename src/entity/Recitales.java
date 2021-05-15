@@ -10,7 +10,9 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 
 	private boolean vip;
 	public Generos generos;
-	public Bandas bandas;
+	public Bandas banda;
+	public Bandas bandaSoporte1;
+	public Bandas bandaSoporte2;
 	private int cantsoporte;
 
 	// CONTRUCTORES
@@ -19,10 +21,10 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 		super();
 	}
 
-	public Recitales(boolean vip, Generos genero, Bandas banda, int cantsoporte, Date fecha) {
+	public Recitales(boolean vip, Generos genero, Bandas banda,Bandas bandaSoporte1,Bandas bandaSoporte2, int cantsoporte, Date fecha) {
 		super();
 		this.setGeneros(genero);
-		this.setBandas(banda);
+		this.setBanda(banda);
 		this.vip = vip;
 		this.cantsoporte = cantsoporte;
 		super.setTipoEvento("Recital");
@@ -46,12 +48,28 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 		this.vip = vip;
 	}
 
-	public String getBandas() {
-		return bandas.toString();
+	public String getBanda() {
+		return banda.toString();
+	}
+	
+	public void setBanda(Bandas banda) {
+		this.banda = banda;
 	}
 
-	public void setBandas(String banda) {
-		this.bandas.setNombre(banda);
+	public void setBandaSoporte1(Bandas bandaSoporte1) {
+		this.bandaSoporte1 = bandaSoporte1;
+	}
+
+	public void setBandaSoporte2(Bandas bandaSoporte2) {
+		this.bandaSoporte2 = bandaSoporte2;
+	}
+
+	public String getBandaSoporte1() {
+		return bandaSoporte1.toString();
+	}
+
+	public String getBandaSoporte2() {
+		return bandaSoporte2.toString();
 	}
 
 	public String getGenero() {
@@ -66,9 +84,6 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 		this.generos = generos;
 	}
 
-	public void setBandas(Bandas bandas) {
-		this.bandas = bandas;
-	}
 
 	public int getCantsoporte() {
 		return cantsoporte;
@@ -85,9 +100,8 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 
 	@Override
 	public String toString() {
-		return "Recitales [Flag vip: " + vip + ", Genero: " + generos.getDescripcion() + ", Bandas: "
-				+ bandas.getNombre() + ", cantsoporte: " + cantsoporte + " ID entrada: " + super.getidEntrada() + "   "
-				+ "Duracion: " + super.getDuracion() + "  Precio: $" + super.getPrecio() + "]";
+		return "Recitales [vip=" + vip + ", generos=" + generos + ", banda=" + banda + ", bandaSoporte1="
+				+ bandaSoporte1 + ", bandaSoporte2=" + bandaSoporte2 + ", cantsoporte=" + cantsoporte + "]";
 	}
 
 	@Override

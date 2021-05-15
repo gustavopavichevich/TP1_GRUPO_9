@@ -12,10 +12,15 @@ public class Principal {
 		Date fecha = new Date();
 
 		Generos gen = new Generos("rock", false);
-		Bandas ban = new Bandas();
-		ban.setNombre("Metallica");
+		Bandas ban1 = new Bandas();
+		Bandas ban2 = new Bandas();
+		Bandas ban3 = new Bandas();
 		
-		Recitales evRecital = new Recitales(true,gen,ban,0, fecha);
+		ban1.setNombre("Metallica");
+		ban2.setNombre("La Vela Puerca");
+		ban3.setNombre("NTVG");
+		
+		Recitales evRecital = new Recitales(true,gen,ban1,ban2,ban3,0, fecha);
 		System.out.println(evRecital.toString());
 		
 		System.out.println(" ");		
@@ -28,9 +33,11 @@ public class Principal {
 		System.out.println(" ");
 		
 		Generos gen2 = new Generos("drama", true);
-		Actores actor = new Actores("Ricardo","Darin");
+		Actores actor1 = new Actores("Ricardo","Darin");
+		Actores actor2 = new Actores("Francella","Guillermo");
+		Actores actor3 = new Actores("Minujin","Juan");
 		
-		Teatros pruebat = new Teatros(gen2,actor,1);
+		Teatros pruebat = new Teatros(gen2,actor1,actor2,actor3,1);
 		System.out.println(pruebat.toString());
 		System.out.println(" ");
 		System.out.println("Prueba de INTERFAZ ConsultaGenero de IGENEROSDAO para Teatro: "+ pruebat.consultarGenero());

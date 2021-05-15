@@ -6,7 +6,9 @@ import dao.IGenerosDAO;
 public class Teatros extends Eventos implements IGenerosDAO {
 
 	private Generos genero;
-	private Actores actores;
+	private Actores actor1;
+	private Actores actor2;
+	private Actores actor3;
 	private int cantactores;
 
 	// CONSTRUCTORES
@@ -15,27 +17,45 @@ public class Teatros extends Eventos implements IGenerosDAO {
 		super();
 	}
 
-	public Teatros(Generos genero, Actores actores, int cantactores) {
+	public Teatros(Generos genero, Actores actor1, Actores actor2, Actores actor3, int cantactores) {
 		super();
 		this.genero = genero;
-		this.actores = actores;
+		this.actor1 = actor1;
+		this.actor2 = actor2;
+		this.actor3 = actor3;
 		this.cantactores = cantactores;
 	}
 
 	public Teatros(String generoteatro, Actores actores, int cantactores) {
 		super();
 		this.setCantactores(cantactores);
-		this.setActores(actores);
+		this.setActor1(actores);
 	}
 
 	// METODOS
 
-	public Actores getActores() {
-		return actores;
+	public Actores getActor1() {
+		return actor1;
 	}
 
-	public void setActores(Actores actores) {
-		this.actores = actores;
+	public void setActor1(Actores actor) {
+		this.actor1 = actor;
+	}
+	
+	public Actores getActor2() {
+		return actor2;
+	}
+
+	public void setActor2(Actores actores2) {
+		this.actor2 = actores2;
+	}
+
+	public Actores getActor3() {
+		return actor3;
+	}
+
+	public void setActor3(Actores actores3) {
+		this.actor3 = actores3;
 	}
 
 	public Generos getGenero() {
@@ -62,8 +82,8 @@ public class Teatros extends Eventos implements IGenerosDAO {
 
 	@Override
 	public String toString() {
-		return "Teatros [Genero: " + genero.getDescripcion() + ", Actores: " + actores.getNombre() + " "
-				+ actores.getApellido() + " , Cant. de actores: " + cantactores + "]";
+		return "Teatros [genero=" + genero + ", actor1=" + actor1 + ", actor2=" + actor2 + ", actor3=" + actor3
+				+ ", cantactores=" + cantactores + "]";
 	}
 
 	public double bonificaCorporativo(int cantInvitados) {
@@ -72,4 +92,6 @@ public class Teatros extends Eventos implements IGenerosDAO {
 		}
 		return super.getPrecio();
 	}
+
+
 }
