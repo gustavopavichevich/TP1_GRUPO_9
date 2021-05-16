@@ -85,12 +85,20 @@ public class Teatros extends Eventos implements IGenerosDAO {
 		return "Teatros [genero=" + this.genero.getDescripcion() + ", actor1=" + actor1 + ", actor2=" + actor2 + ", actor3=" + actor3
 				+ ", cantactores=" + cantactores + "]";
 	}
-
+	// TODO: QUE HACEMOS CON EL PRECIO
+	// public double bonificaCorporativo(int cantInvitados) {
+	// if (cantInvitados > 20) {
+	// return super.getPrecio() * 0.85;
+	// }
+	// return super.getPrecio();
+	// }
+	
+	
+	// TODO: ESTA IMPLEMENTACIÓN NO DEBERIA ESTAR ACA
+	@Override
 	public double bonificaCorporativo(int cantInvitados) {
-		if (cantInvitados > 20) {
-			return super.getPrecio() * 0.85;
-		}
-		return super.getPrecio();
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 

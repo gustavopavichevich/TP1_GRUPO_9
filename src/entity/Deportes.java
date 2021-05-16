@@ -5,7 +5,7 @@ import entity.Eventos;
 public class Deportes extends Eventos {
 
 	private final String[] tipoDeportes = { "Futbol", "Rugby", "Hockey" };
-	private final int[] precioDeportes = { 300, 450, 380 };
+	private final int[] valor = { 300, 450, 380 };
 	private final double recargo = 1.3;
 	private String tipodeporte;
 	private boolean internacional;
@@ -22,17 +22,17 @@ public class Deportes extends Eventos {
 		for (int i = 0; i < tipoDeportes.length; i++) {
 			if (tipo == tipoDeportes[i]) {
 				this.tipodeporte = tipo;
-				super.setPrecio(precioDeportes[i]);
+				// this.precioDeportes[i];
 			}
 		}
 
 		if (this.tipodeporte == "") {
 			System.out.println("Tipo deporte incorrecto");
 		}
-
-		if (this.internacional) {
-			super.setPrecio(super.getPrecio() * this.recargo);
-		}
+		// TODO: ARREGLAR ESTO
+		// if (this.internacional) {
+		// super.setPrecio(super.getPrecio() * this.recargo);
+		// }
 
 	}
 
@@ -51,16 +51,26 @@ public class Deportes extends Eventos {
 	}
 
 	@Override
-	public String toString() {
-		return "Deportes [" + "Tipo de deporte: " + tipodeporte + ", Flag internacional: " + internacional
-				+ " ID Entrada: " + super.getidEntrada() + "   " + "Duracion: " + super.getDuracion() + "  Precio: $"
-				+ super.getPrecio() + "]";
+	public double bonificaCorporativo(int cantInvitados) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
-	public double bonificaCorporativo(int cantInvitados) {
-		if (cantInvitados > 20) {
-			return super.getPrecio() * 0.85;
-		}
-		return super.getPrecio();
-	}
+	// TODO:QUE HACEMOS CON EL PRECIO
+	// @Override
+	// public String toString() {
+	// return "Deportes [" + "Tipo de deporte: " + tipodeporte + ", Flag
+	// internacional: " + internacional
+	// + " ID Entrada: " + super.getidEntrada() + " " + "Duracion: " +
+	// super.getDuracion() + " Precio: $"
+	// + super.getPrecio() + "]";
+	// }
+	
+	// TODO: QUE HACEMOS CON LOS PRECIOS
+	// public double bonificaCorporativo(int cantInvitados) {
+	// if (cantInvitados > 20) {
+	// return super.getPrecio() * 0.85;
+	// }
+	// return super.getPrecio();
+	// }
 }

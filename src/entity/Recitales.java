@@ -1,7 +1,5 @@
 package entity;
 
-import java.util.Date;
-
 import dao.IEntrada;
 import dao.IGenerosDAO;
 import entity.Eventos;
@@ -14,7 +12,8 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 	public Bandas bandaSoporte1;
 	public Bandas bandaSoporte2;
 	private int cantsoporte;
-//	private Date fecha;
+	private final int valor;
+	// private Date fecha;
 
 	// CONTRUCTORES
 
@@ -22,7 +21,9 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 		super();
 	}
 
-	public Recitales(boolean vip, GeneroRecital gen, Bandas banda,Bandas bandaSoporte1,Bandas bandaSoporte2, int cantsoporte, Date fecha) {
+	// TODO: ARREGLAR LOS SETEOS PARA QUE ESTO ANDE
+	public Recitales(boolean vip, GeneroRecital gen, Bandas banda, Bandas bandaSoporte1, Bandas bandaSoporte2,
+			int cantsoporte) {
 		super();
 		this.setGeneros(gen);
 		this.setBanda(banda);
@@ -30,15 +31,13 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 		this.setBandaSoporte2(bandaSoporte2);
 		this.vip = vip;
 		this.cantsoporte = cantsoporte;
-		super.setTipoEvento("Recital");
 		super.setTitulo(banda.getNombre());
-		super.setFecha(fecha);
-
-		if (vip == true) {
-			super.setPrecio(1500);
-		} else {
-			super.setPrecio(800);
-		}
+		// TOOD: QUE HACEMOS CON EL PRECIO
+		// if (vip == true) {
+		// super.setPrecio(1500);
+		// } else {
+		// super.setPrecio(800);
+		// }
 	}
 
 	// METODOS
@@ -54,11 +53,13 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 	public String getBanda() {
 		return banda.toString();
 	}
-	
+
 	public void setBanda(Bandas banda) {
 		this.banda = banda;
 	}
 
+	// TODO: ESTÁ MAL HECHO EL SETEO PORQUE SI QUEREMOS HACER ESTO DEBEMOS
+	// IMPLEMENTAR CLONEABLE. EXTENDER ESTA SOLUCIÓN EN TODAS LAS ENTIDADES
 	public void setBandaSoporte1(Bandas bandaSoporte1) {
 		this.bandaSoporte1 = bandaSoporte1;
 	}
@@ -87,7 +88,6 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 		this.generos = generos;
 	}
 
-
 	public int getCantsoporte() {
 		return cantsoporte;
 	}
@@ -103,21 +103,38 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 
 	@Override
 	public String toString() {
-		return "Recitales [vip=" + vip + ", generos=" + this.generos.getDescripcion() + ", banda=" + banda + ", bandaSoporte1="
-				+ bandaSoporte1 + ", bandaSoporte2=" + bandaSoporte2 + ", cantsoporte=" + cantsoporte + "]";
+		return "Recitales [vip=" + vip + ", generos=" + this.generos.getDescripcion() + ", banda=" + banda
+				+ ", bandaSoporte1=" + bandaSoporte1 + ", bandaSoporte2=" + bandaSoporte2 + ", cantsoporte="
+				+ cantsoporte + "]";
 	}
+	// TODO: QUE HACEMOS CON EL PRECIO
+	// @Override
+	// public String ConsultarDatosEntrada() {
+	// return "Genero: " + this.getGenero() + ", Tipo de Evento: " +
+	// super.getTipoEvento() + ", Duracion: "
+	// + super.getDuracion() + ", ID Entrada: " + super.getidEntrada() + ", ID
+	// Evento: " + super.getIdEvento()
+	// + ", Precio: " + super.getPrecio() + ", Titulo: " + super.getTitulo() + ",
+	// Fecha: " + super.getFecha();
+	// }
+	//
+	// public double bonificaCorporativo(int cantInvitados) {
+	// if (cantInvitados > 20) {
+	// return super.getPrecio() * 0.85;
+	// }
+	// return super.getPrecio();
+	// }
 
 	@Override
 	public String ConsultarDatosEntrada() {
-		return "Genero: " + this.getGenero() + ", Tipo de Evento: " + super.getTipoEvento() + ", Duracion: "
-				+ super.getDuracion() + ", ID Entrada: " + super.getidEntrada() + ", ID Evento: " + super.getIdEvento()
-				+ ", Precio: " + super.getPrecio() + ", Titulo: " + super.getTitulo() + ", Fecha: " + super.getFecha();
+		// TODO Auto-generated method stub
+		return null;
 	}
 
+	// TODO: ESTA IMPLEMENTACIÓN NO DEBERIA ESTAR ACA
+	@Override
 	public double bonificaCorporativo(int cantInvitados) {
-		if (cantInvitados > 20) {
-			return super.getPrecio() * 0.85;
-		}
-		return super.getPrecio();
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }

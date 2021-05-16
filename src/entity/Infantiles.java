@@ -6,18 +6,18 @@ public class Infantiles extends Eventos {
 
 	private boolean souvenir;
 	private int edad;
-	private final double precioMayores = 250;
-	private final double precioMenores = 500;
+	private final int[] valor = {250,500};
 
 	// CONSTRUCTORES
 
 	public Infantiles() {
 		super();
-		if (edad < 8) {
-			super.setPrecio(precioMenores);
-		} else {
-			super.setPrecio(precioMayores);
-		}
+		// TODO:ARREGLAR PRECIOS
+		// if (edad < 8) {
+		// super.setPrecio(precioMenores);
+		// } else {
+		// super.setPrecio(precioMayores);
+		// }
 
 	}
 
@@ -25,10 +25,11 @@ public class Infantiles extends Eventos {
 		super();
 		this.edad = edad;
 		if (edad < 8) {
-			super.setPrecio(precioMenores);
-		}
-		{
-			super.setPrecio(precioMayores);
+			// TODO:TENEMOS QUE ARRIESGAR EL PRECIO
+			// super.setPrecio(precioMenores);
+			// }
+			// {
+			// super.setPrecio(precioMayores);
 		}
 
 	}
@@ -42,16 +43,26 @@ public class Infantiles extends Eventos {
 	public void setSouvenir(boolean souvenir) {
 		this.souvenir = souvenir;
 	}
+	// TODO:TENEMOS QUE ARRIESGAR EL PRECIO
+	//
+	// @Override
+	// public String toString() {
+	// return "Infantil [Flag souvenir: " + souvenir + ", Edad: " + edad + ",
+	// Precio: $" + super.getPrecio() + "]";
+	// }
+	//
+	// public double bonificaCorporativo(int cantInvitados) {
+	// if (cantInvitados > 20) {
+	// return super.getPrecio() * 0.85;
+	// }
+	// return super.getPrecio();
+	// }
 
+	
+	// TODO: ESTA IMPLEMENTACIÓN NO DEBERIA ESTAR ACA
 	@Override
-	public String toString() {
-		return "Infantil [Flag souvenir: " + souvenir + ", Edad: " + edad + ", Precio: $" + super.getPrecio() + "]";
-	}
-
 	public double bonificaCorporativo(int cantInvitados) {
-		if (cantInvitados > 20) {
-			return super.getPrecio() * 0.85;
-		}
-		return super.getPrecio();
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
