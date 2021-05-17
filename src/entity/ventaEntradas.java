@@ -57,7 +57,7 @@ public class ventaEntradas {
 	@Override
 	public String toString() {
 		return "ID Factura:" + idFactura  + "\nDia Venta:" + diaVenta + "\nCliente: " + cliente.getApellido() + " " + cliente.getNombre() + "\nDni: " + cliente.getDni()
-				+ "\nMontoTotal: " + montoTotal;
+				+ "\nMontoTotal: $" + montoTotal;
 	}
 	
 	
