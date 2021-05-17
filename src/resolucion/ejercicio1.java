@@ -100,7 +100,7 @@ public class ejercicio1 {
 		listaEntradas.add(entradaTeatro);
 		listaEntradas.add(entradaRecital);
 		
-		//Recorrido de la lista de entradas adquiridas
+		//Recorrido de la lista de entradas adquiridas PUNTO 1 DEL TP
 		
 		System.out.println("Listado de entradas \n");		
 		Iterator<Entradas> it = listaEntradas.iterator();
