@@ -6,18 +6,18 @@ import java.util.List;
 public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 	private int idEntrada;
 	private static int contEntrada = 0;
-	private double precio;
+	//private double precio; Los precios estan dentro de cada tipo de entrada. CJB
 	private LocalDate fecha;
 	private int duracion;
 	private List<Eventos> listaEventos;
 
-	public double getPrecio() {
+	/*public double getPrecio() {
 		return precio;
 	}
 
 	public void setPrecio(double precio) {
 		this.precio = precio;
-	}
+	}*/
 
 	public LocalDate getFecha() {
 		return fecha;
@@ -36,7 +36,7 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 	}
 
 	public Entradas(double precio, LocalDate fecha, int duracion) {
-		this.precio = precio;
+		//this.precio = precio;
 		this.fecha = fecha;
 		this.duracion = duracion;
 		this.idEntrada = contEntrada;
@@ -54,14 +54,11 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + duracion;
-		long temp;
+		/*long temp;
 		temp = Double.doubleToLongBits(precio);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + (int) (temp ^ (temp >>> 32));*/
 		return result;
 	}
-
-	
-
 
 
 
@@ -76,8 +73,8 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 		Entradas other = (Entradas) obj;
 		if (duracion != other.duracion)
 			return false;
-		if (Double.doubleToLongBits(precio) != Double.doubleToLongBits(other.precio))
-			return false;
+		/*if (Double.doubleToLongBits(precio) != Double.doubleToLongBits(other.precio))
+			return false;*/ //CJB
 		return true;
 	}
 
@@ -95,9 +92,9 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 
 	@Override
 	public String toString() {
-		return "Entradas [precio=" + precio + ", fecha=" + fecha + ", duracion="
+		return "Entradas [fecha=" + fecha + ", duracion="
 				+ duracion + ", idEntrada=" + idEntrada + "]";
-	}
+	}//precio=" + precio + ", CJB
 
 	public List<Eventos> getListaEventos() {
 		return listaEventos;

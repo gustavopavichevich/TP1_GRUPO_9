@@ -5,10 +5,11 @@ import entity.Eventos;
 public class Deportes extends Eventos {
 
 	private final String[] tipoDeportes = { "Futbol", "Rugby", "Hockey" };
-	private final int[] valor = { 300, 450, 380 };
-	private final double recargo = 1.3;
 	private String tipodeporte;
-	private boolean internacional;
+	/*private final int[] valor = { 300, 450, 380 };
+	private final double recargo = 1.3;
+	
+	private boolean internacional;*/
 
 	// CONSTRUCTORES
 
@@ -18,17 +19,17 @@ public class Deportes extends Eventos {
 
 	public Deportes(boolean internacional, String tipo) {
 		super();
-		this.internacional = internacional;
-		for (int i = 0; i < tipoDeportes.length; i++) {
-			if (tipo == tipoDeportes[i]) {
-				this.tipodeporte = tipo;
-				// this.precioDeportes[i];
-			}
-		}
-
-		if (this.tipodeporte == "") {
-			System.out.println("Tipo deporte incorrecto");
-		}
+//		this.internacional = internacional;
+//		for (int i = 0; i < tipoDeportes.length; i++) {
+//			if (tipo == tipoDeportes[i]) {
+//				this.tipodeporte = tipo;
+//				// this.precioDeportes[i];
+//			}
+//		}
+//
+//		if (this.tipodeporte == "") {
+//			System.out.println("Tipo deporte incorrecto");
+//		}
 		// TODO: ARREGLAR ESTO
 		// if (this.internacional) {
 		// super.setPrecio(super.getPrecio() * this.recargo);
@@ -42,13 +43,13 @@ public class Deportes extends Eventos {
 		return tipodeporte;
 	}
 
-	public boolean isInternacional() {
-		return internacional;
-	}
-
-	public void setInternacional(boolean internacional) {
-		this.internacional = internacional;
-	}
+//	public boolean isInternacional() {
+//		return internacional;
+//	}
+//
+//	public void setInternacional(boolean internacional) {
+//		this.internacional = internacional;
+//	}
 
 	@Override
 	public double bonificaCorporativo(int cantInvitados) {

@@ -6,13 +6,13 @@ import entity.Eventos;
 
 public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 
-	private boolean vip;
+	//private boolean vip; va en entrada recital. CJB
 	public GeneroRecital generos;
 	public Bandas banda;
 	public Bandas bandaSoporte1;
 	public Bandas bandaSoporte2;
 	private int cantsoporte;
-	private final int valor;
+	//private final int valor; va en entrada recital. CJB
 	// private Date fecha;
 
 	// CONTRUCTORES
