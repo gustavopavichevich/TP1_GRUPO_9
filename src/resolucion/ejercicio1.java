@@ -28,6 +28,7 @@ public class ejercicio1 {
 		LocalDate fecha ;
 		fecha=LocalDate.now();
 		
+		
 		// Datos necesarios para generar eventos y ventas
 		
 		// Generacion de actores
@@ -60,28 +61,28 @@ public class ejercicio1 {
 		Deportes evDeporte = new Deportes(true,"Futbol");
 		evDeporte.setDuracion(4);
 		evDeporte.setIdEvento(1);
-		evDeporte.setFecha(fecha);
+		evDeporte.setFecha(fecha.plusDays(380));
 		evDeporte.setTitulo("Boca vs River");
 
 		//Generacion de stock de eventos para infantiles
 		Infantiles evInfantil = new Infantiles(4);
 		evInfantil.setDuracion(2);
 		evInfantil.setIdEvento(1);
-		evInfantil.setFecha(fecha);
+		evInfantil.setFecha(fecha.plusDays(220));
 		evInfantil.setTitulo("Cumpleaños Gabriel");
 		
 		//Generacion de stock de eventos para recitales
 		Recitales evRecital = new Recitales(true,gen,ban1,ban2,ban3,0);
 		evRecital.setDuracion(3);
 		evRecital.setIdEvento(1);
-		evRecital.setFecha(fecha);
+		evRecital.setFecha(fecha.plusDays(120));
 		evRecital.setTitulo("Concierto de Rock");
 		
 		//Generacion de stock de eventos para teatros
 		Teatros evTeatro = new Teatros(gen2,actor1,actor2,actor3,1);
 		evTeatro.setDuracion(7);
 		evTeatro.setIdEvento(1);
-		evTeatro.setFecha(fecha);
+		evTeatro.setFecha(fecha.plusDays(80));
 		evTeatro.setTitulo("Romeo y Julieta");
 		
 		//0 Deportes 1Teatro 2infantiles 3recitales
