@@ -87,9 +87,7 @@ public class ejercicio1 {
 		//Generacion de venta de entradas sueltas para eventos
 		EntradaDeporte entradaDeporte= new EntradaDeporte(evDeporte.getTipodeporte(),evDeporte.getFecha(), evDeporte.getDuracion(), false);
 		EntradaInfantil entradaInfantil= new EntradaInfantil(4, evInfantil.getFecha(), evInfantil.getDuracion());	
-		// TODO: Arreglar el constructor ENTRADATEATRO para que sea similar al de entrada infantil
 		EntradaTeatro entradaTeatro= new EntradaTeatro(evTeatro.getFecha(), evTeatro.getDuracion());
-		// TODO: Arreglar el constructor ENTRADARECITAL para que sea similar al de entrada infantil
 		EntradaRecital entradaRecital = new EntradaRecital(evRecital.isVip(),evRecital.getFecha(), evRecital.getDuracion());
 		
 		//Generacion de la lista de entradas adquiridas
