@@ -58,7 +58,7 @@ public class ejercicio1 {
 		
 		//Generacion de stock de eventos para deportes
 		Deportes evDeporte = new Deportes(true,"Futbol");
-		evDeporte.setDuracion(2);
+		evDeporte.setDuracion(4);
 		evDeporte.setIdEvento(1);
 		evDeporte.setFecha(fecha);
 		evDeporte.setTitulo("Boca vs River");
@@ -72,51 +72,64 @@ public class ejercicio1 {
 		
 		//Generacion de stock de eventos para recitales
 		Recitales evRecital = new Recitales(true,gen,ban1,ban2,ban3,0);
-		evRecital.setDuracion(2);
+		evRecital.setDuracion(3);
 		evRecital.setIdEvento(1);
 		evRecital.setFecha(fecha);
 		evRecital.setTitulo("Concierto de Rock");
 		
 		//Generacion de stock de eventos para teatros
 		Teatros evTeatro = new Teatros(gen2,actor1,actor2,actor3,1);
-		evTeatro.setDuracion(2);
+		evTeatro.setDuracion(7);
 		evTeatro.setIdEvento(1);
 		evTeatro.setFecha(fecha);
 		evTeatro.setTitulo("Romeo y Julieta");
 		
+		//0 Deportes 1Teatro 2infantiles 3recitales
 		//Generacion de venta de entradas sueltas para eventos
-		EntradaDeporte entradaDeporte= new EntradaDeporte(evDeporte.getTipodeporte(),evDeporte.getFecha(), evDeporte.getDuracion(), false);
-		EntradaInfantil entradaInfantil= new EntradaInfantil(4, evInfantil.getFecha(), evInfantil.getDuracion());	
-		EntradaTeatro entradaTeatro= new EntradaTeatro(evTeatro.getFecha(), evTeatro.getDuracion());
-		EntradaRecital entradaRecital = new EntradaRecital(evRecital.isVip(),evRecital.getFecha(), evRecital.getDuracion());
+		EntradaDeporte entradaDeporte= new EntradaDeporte(evDeporte.getTipodeporte(),evDeporte.getFecha(), evDeporte.getDuracion(), false,0, evDeporte.getTitulo());
+		EntradaInfantil entradaInfantil= new EntradaInfantil(4, evInfantil.getFecha(), evInfantil.getDuracion(),2,evInfantil.getTitulo());	
+		EntradaTeatro entradaTeatro= new EntradaTeatro(evTeatro.getFecha(), evTeatro.getDuracion(),1,evTeatro.getTitulo());
+		EntradaRecital entradaRecital = new EntradaRecital(evRecital.isVip(),evRecital.getFecha(), evRecital.getDuracion(),3,evRecital.getTitulo());
+		EntradaInfantil entradaInfantil2= new EntradaInfantil(34, evInfantil.getFecha(), evInfantil.getDuracion(),2,evInfantil.getTitulo());	
 		
 		//Generacion de la lista de entradas adquiridas
 
-		ArrayList<Entradas> listaEntradas = new ArrayList<Entradas>();
+		ArrayList<Eventos> listaEntradas = new ArrayList<Eventos>();
 		listaEntradas.add(entradaDeporte);
 		listaEntradas.add(entradaInfantil);
+		listaEntradas.add(entradaInfantil2);
 		listaEntradas.add(entradaTeatro);
 		listaEntradas.add(entradaRecital);
 		
-		//Recorrido de la lista de entradas adquiridas PUNTO 1 DEL TP
+		//Calculo del total a pagar
 		
-		System.out.println("Listado de entradas \n");		
-		Iterator<Entradas> it = listaEntradas.iterator();
-		while(it.hasNext())
-		{
-			Entradas e = (Entradas) it.next();
-	//		montoTotal += e.getPrecio();
-			System.out.println(e.toString());
-		}
-		
+		double montoTotal=entradaDeporte.getPrecio() + entradaInfantil.getPrecio()+entradaTeatro.getPrecio()+entradaRecital.getPrecio();
 		
 		// PRueba de una venta total para un cliente
-		double montoTotal=0;
+		
 		ventaEntradas venta1 = new ventaEntradas(fecha, p1,listaEntradas, montoTotal);
 		
 		//Impresion de los dos objetos ventaEntrada
-		System.out.println("Listado de venta de entradas \n");	
+		System.out.println("Datos de la venta \n");	
 				System.out.println(venta1.toString() );
+		
+		//Recorrido de la lista de entradas adquiridas PUNTO 1 DEL TP
+				
+		System.out.println(" \n");	
+		System.out.println("Entradas adquiridas \n");		
+		Iterator<Eventos> it = listaEntradas.iterator();
+		while(it.hasNext())
+		{
+			
+			Entradas e = (Entradas) it.next();
+			
+	//		montoTotal += e.getPrecio();
+			System.out.println(e.toString());
+		
+		}
+	
+		//System.out.println("\n");	
+	
 				
 		
 		

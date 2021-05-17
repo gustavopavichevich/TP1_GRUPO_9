@@ -11,10 +11,12 @@ public class EntradaTeatro extends Entradas{
 	}
 	
 	
-	public EntradaTeatro(LocalDate fecha, int duracion) {
+	public EntradaTeatro(LocalDate fecha, int duracion, int tipo, String titulo) {
 		
 		super.setFecha(fecha);
 		super.setDuracion(duracion);
+		super.setTipo(tipo);
+		super.setTitulo(titulo);
 
 	}
 

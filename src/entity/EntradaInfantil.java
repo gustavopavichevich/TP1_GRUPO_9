@@ -10,7 +10,7 @@ public class EntradaInfantil extends Entradas {
 	private final double precioMenor = 250.0;
 	private final double precioMayor = 500.0;
 
-	public EntradaInfantil(int edad, LocalDate fecha, int duracion) {
+	public EntradaInfantil(int edad, LocalDate fecha, int duracion, int tipo, String titulo) {
 		super();
 		if (edad < 8) {
 			this.precio = precioMenor;
@@ -19,6 +19,8 @@ public class EntradaInfantil extends Entradas {
 		}
 		super.setFecha(fecha);
 		super.setDuracion(duracion);
+		super.setTipo(tipo);
+		super.setTitulo(titulo);
 	}
 
 	public void setEdad(int edad) {

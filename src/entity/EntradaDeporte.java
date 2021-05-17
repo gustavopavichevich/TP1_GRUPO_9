@@ -12,7 +12,7 @@ public class EntradaDeporte extends Entradas {
 	private final double precioRugby = 450.0;
 	private final double recargo = 1.3;
 
-	public EntradaDeporte(String tipoDeporte,LocalDate fecha, int duracion, boolean esInternacional) {
+	public EntradaDeporte(String tipoDeporte,LocalDate fecha, int duracion, boolean esInternacional, int tipo, String titulo) {
 		super();
 		if (this.tipoDeporte == "Futbol") {
 			this.precio = precioFutbol;
@@ -25,6 +25,8 @@ public class EntradaDeporte extends Entradas {
 			this.precio *= recargo;
 		super.setFecha(fecha);
 		super.setDuracion(duracion);
+		super.setTipo(tipo);
+		super.setTitulo(titulo);
 	}
 
 	public double getPrecio() {

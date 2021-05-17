@@ -8,7 +8,18 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 	private static int contEntrada = 0;
 	private LocalDate fecha;
 	private int duracion;
-	private List<Eventos> listaEventos;
+	private String titulo;
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	//private List<Eventos> listaEventos;
+	private int tipo;
+	//0 Deportes 1Teatro 2infantiles 3recitales
 
 	
 	public LocalDate getFecha() {
@@ -27,8 +38,10 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 		this.duracion = duracion;
 	}
 
-	public Entradas(LocalDate fecha, int duracion) {
+	public Entradas(LocalDate fecha, int duracion, int tipo, String titulo) {
 		this.fecha = fecha;
+		this.tipo = tipo;
+		this.titulo = titulo;
 		this.duracion = duracion;
 		this.idEntrada = contEntrada;
 		Entradas.contEntrada++;
@@ -83,16 +96,24 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 
 	@Override
 	public String toString() {
-		return "Entradas [idEntrada=" + idEntrada + ", fecha=" + fecha + ", duracion=" + duracion + ", listaEventos="
-				+ listaEventos + "]";
+		return "ID Entrada: " + idEntrada + ", Fecha: " + fecha + ", Duracion: " + duracion + "Hs, Evento: "
+				+ titulo;
 	}
 
-	public List<Eventos> getListaEventos() {
+/*	public List<Eventos> getListaEventos() {
 		return listaEventos;
 	}
 
 	public void setListaEventos(List<Eventos> listaEventos) {
 		this.listaEventos = listaEventos;
+	}*/
+
+	public int getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(int tipo) {
+		this.tipo = tipo;
 	}
 
 }

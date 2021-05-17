@@ -10,9 +10,11 @@ public class EntradaRecital extends Entradas {
 	public EntradaRecital() {
 		// TODO Auto-generated constructor stub
 	}
-	public EntradaRecital(boolean vip,LocalDate fecha, int duracion) {
+	public EntradaRecital(boolean vip,LocalDate fecha, int duracion, int tipo, String titulo) {
 		this.vip = vip;
 		super.setFecha(fecha);
+		super.setTipo(tipo);
+		super.setTitulo(titulo);
 		super.setDuracion(duracion);
 		if(vip) {
 			this.precio = 1500.0;

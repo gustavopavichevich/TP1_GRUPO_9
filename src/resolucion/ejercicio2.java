@@ -9,12 +9,12 @@ import entity.Entradas;
 public class ejercicio2 {
 
 	public static void main(String[] args) {
-
+/*
 		Date fecha = new Date();
 		// iniciado por pablo macial
 		TreeSet<Entradas> listaEntradas = new TreeSet<Entradas>();
-
-		Entradas e1 = new Entradas("La Renga", 500.0, fecha, 3);
+		
+		Entradas e1 = new Entradas("La Renga", 500.0, fecha, 3,);
 		Entradas e2 = new Entradas("Piñon Fijo", 200.0, fecha, 2);
 		Entradas e3 = new Entradas("Racing-Independiente", 380.0, fecha, 2);
 		Entradas e4 = new Entradas("Stravaganza", 500.0, fecha, 4);
@@ -77,7 +77,7 @@ public class ejercicio2 {
 			Entradas p = (Entradas) iterador.next();
 			System.out.println(p.toString());
 		}
-
+*/
 	}
 
 }

@@ -11,7 +11,7 @@ public class ventaEntradas {
 	private static int contFactura=0;
 	private LocalDate diaVenta;
 	private Clientes cliente;
-	private ArrayList<Entradas> listaEntradas;
+	private ArrayList<Eventos> listaEntradas;
 	private double montoTotal;
 	
 	//sets y gets
@@ -27,10 +27,10 @@ public class ventaEntradas {
 	public void setCliente(Clientes cliente) {
 		this.cliente = cliente;
 	}
-	public ArrayList<Entradas> getListaEntradas() {
+	public ArrayList<Eventos> getListaEntradas() {
 		return listaEntradas;
 	}
-	public void setListaEntradas(ArrayList<Entradas> listaEntradas) {
+	public void setListaEntradas(ArrayList<Eventos> listaEntradas) {
 		this.listaEntradas = listaEntradas;
 	}
 	public double getMontoTotal() {
@@ -39,7 +39,7 @@ public class ventaEntradas {
 	public void setMontoTotal(double montoTotal) {
 		this.montoTotal = montoTotal;
 	}
-	public ventaEntradas(LocalDate fecha, Clientes cliente, ArrayList<Entradas> listaEntradas,
+	public ventaEntradas(LocalDate fecha, Clientes cliente, ArrayList<Eventos> listaEntradas,
 			double montoTotal) {
 		this.idFactura = contFactura;
 		this.diaVenta = fecha;
@@ -56,8 +56,8 @@ public class ventaEntradas {
 	
 	@Override
 	public String toString() {
-		return "ventaEntradas [idFactura=" + idFactura + ", diaVenta=" + diaVenta + ", cliente=" + cliente
-				+ ", listaEntradas=" + listaEntradas + ", montoTotal=" + montoTotal + "]";
+		return "ID Factura:" + idFactura  + "\nDia Venta:" + diaVenta + "\nCliente: " + cliente.getApellido() + " " + cliente.getNombre() + "\nDni: " + cliente.getDni()
+				+ "\nMontoTotal: " + montoTotal;
 	}
 	
 	
