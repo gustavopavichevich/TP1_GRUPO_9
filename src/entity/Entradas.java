@@ -6,19 +6,11 @@ import java.util.List;
 public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 	private int idEntrada;
 	private static int contEntrada = 0;
-	//private double precio; Los precios estan dentro de cada tipo de entrada. CJB
 	private LocalDate fecha;
 	private int duracion;
 	private List<Eventos> listaEventos;
 
-	/*public double getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}*/
-
+	
 	public LocalDate getFecha() {
 		return fecha;
 	}
@@ -35,8 +27,7 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 		this.duracion = duracion;
 	}
 
-	public Entradas(double precio, LocalDate fecha, int duracion) {
-		//this.precio = precio;
+	public Entradas(LocalDate fecha, int duracion) {
 		this.fecha = fecha;
 		this.duracion = duracion;
 		this.idEntrada = contEntrada;

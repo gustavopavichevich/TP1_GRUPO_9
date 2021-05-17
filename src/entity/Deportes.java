@@ -6,10 +6,7 @@ public class Deportes extends Eventos {
 
 	private final String[] tipoDeportes = { "Futbol", "Rugby", "Hockey" };
 	private String tipodeporte;
-	/*private final int[] valor = { 300, 450, 380 };
-	private final double recargo = 1.3;
-	
-	private boolean internacional;*/
+
 
 	// CONSTRUCTORES
 
