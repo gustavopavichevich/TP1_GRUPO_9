@@ -8,6 +8,12 @@ import entity.*;
 public class Principal {
 
 	public static void main(String[] args) {
+		/*
+		 
+		
+		Comento todo ya que esto es del TP1
+		
+		
 		LocalDate fecha ;
 		fecha=LocalDate.now();
 		//declaracion de clientes
@@ -23,7 +29,7 @@ public class Principal {
 		evDeporte.setIdEvento(1);
 		evDeporte.setFecha(fecha);
 		evDeporte.setTitulo("Boca vs River");
-		EntradaDeporte entradaDeporte= new EntradaDeporte(evDeporte.GetPrecio(),evDeporte.getFecha(), evDeporte.getDuracion());
+		EntradaDeporte entradaDeporte= new EntradaDeporte("Futbol",evDeporte.getFecha(), evDeporte.getDuracion());
 
 		//venta entrada para evento infantil
 		Eventos evInfantil = new Infantiles(4);
@@ -67,7 +73,7 @@ public class Principal {
 		listaEntradas.add(entradaInfantil);
 		listaEntradas.add(entradaTeatro);
 		listaEntradas.add(entradaRecital);
-		double montototal=entradaDeporte.getPrecio()+entradaInfantil.getPrecio()+entradaTeatro.getPrecio()+entradaRecital.getPrecio());
+		double montototal=entradaDeporte.getPrecio()+entradaInfantil.getPrecio()+entradaTeatro.getPrecio()+entradaRecital.getPrecio();
 		ventaEntradas venta1 = new ventaEntradas(fecha, p1,listaEntradas,montototal);
 		
 		

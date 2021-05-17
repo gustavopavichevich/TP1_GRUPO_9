@@ -1,5 +1,7 @@
 package entity;
 
+import java.time.LocalDate;
+
 public class EntradaRecital extends Entradas {
 
 	private double precio;
@@ -7,6 +9,16 @@ public class EntradaRecital extends Entradas {
 	
 	public EntradaRecital() {
 		// TODO Auto-generated constructor stub
+	}
+	public EntradaRecital(boolean vip,LocalDate fecha, int duracion) {
+		this.vip = vip;
+		super.setFecha(fecha);
+		super.setDuracion(duracion);
+		if(vip) {
+			this.precio = 1500.0;
+		}else {
+			this.precio= 800.0;
+		}
 	}
 	
 	

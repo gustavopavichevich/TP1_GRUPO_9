@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 
@@ -8,16 +9,16 @@ public class ventaEntradas {
 
 	private int idFactura;
 	private static int contFactura=0;
-	private Date diaVenta;
+	private LocalDate diaVenta;
 	private Clientes cliente;
 	private ArrayList<Entradas> listaEntradas;
 	private double montoTotal;
 	
 	//sets y gets
-	public Date getDiaVenta() {
+	public LocalDate getDiaVenta() {
 		return diaVenta;
 	}
-	public void setDiaVenta(Date diaVenta) {
+	public void setDiaVenta(LocalDate diaVenta) {
 		this.diaVenta = diaVenta;
 	}
 	public Clientes getCliente() {
@@ -38,10 +39,10 @@ public class ventaEntradas {
 	public void setMontoTotal(double montoTotal) {
 		this.montoTotal = montoTotal;
 	}
-	public ventaEntradas(Date diaVenta, Clientes cliente, ArrayList<Entradas> listaEntradas,
+	public ventaEntradas(LocalDate fecha, Clientes cliente, ArrayList<Entradas> listaEntradas,
 			double montoTotal) {
 		this.idFactura = contFactura;
-		this.diaVenta = diaVenta;
+		this.diaVenta = fecha;
 		this.cliente = cliente;
 		this.listaEntradas = listaEntradas;
 		this.montoTotal = montoTotal;

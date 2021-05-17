@@ -17,6 +17,12 @@ public class Infantiles extends Eventos {
 		super();
 		this.edad = edad;
 	}
+	
+	public Infantiles(int edad, boolean souv) {
+		super();
+		this.souvenir = souv;
+		this.edad = edad;
+	}
 
 	// METODOS
 

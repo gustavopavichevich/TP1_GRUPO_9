@@ -83,9 +83,9 @@ public abstract class Entradas extends Eventos implements Comparable<Entradas> {
 
 	@Override
 	public String toString() {
-		return "Entradas [fecha=" + fecha + ", duracion="
-				+ duracion + ", idEntrada=" + idEntrada + "]";
-	}//precio=" + precio + ", CJB
+		return "Entradas [idEntrada=" + idEntrada + ", fecha=" + fecha + ", duracion=" + duracion + ", listaEventos="
+				+ listaEventos + "]";
+	}
 
 	public List<Eventos> getListaEventos() {
 		return listaEventos;
