@@ -11,6 +11,7 @@ public class Recitales extends Eventos implements IGenerosDAO, IEntrada {
 	public Bandas banda;
 	public Bandas bandaSoporte1;
 	public Bandas bandaSoporte2;
+	public boolean vip;
 	private int cantsoporte;
 	//private final int valor; va en entrada recital. CJB
 	// private Date fecha;
