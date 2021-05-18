@@ -104,7 +104,7 @@ public class ejercicio1 {
 		
 		//Calculo del total a pagar
 		
-		double montoTotal=entradaDeporte.getPrecio() + entradaInfantil.getPrecio()+entradaTeatro.getPrecio()+entradaRecital.getPrecio();
+		double montoTotal=entradaDeporte.getPrecio() + entradaInfantil.getPrecio()+entradaTeatro.getPrecio()+entradaRecital.getPrecio()+ entradaInfantil2.getPrecio();
 		
 		// PRueba de una venta total para un cliente
 		

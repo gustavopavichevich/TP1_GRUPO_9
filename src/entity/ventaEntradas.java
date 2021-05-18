@@ -1,6 +1,7 @@
 package entity;
 
 import java.util.Date;
+import java.util.TreeSet;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -12,6 +13,7 @@ public class ventaEntradas {
 	private LocalDate diaVenta;
 	private Clientes cliente;
 	private ArrayList<Eventos> listaEntradas;
+	private TreeSet<Eventos> TreeEntradas;
 	private double montoTotal;
 	
 	//sets y gets
@@ -45,6 +47,15 @@ public class ventaEntradas {
 		this.diaVenta = fecha;
 		this.cliente = cliente;
 		this.listaEntradas = listaEntradas;
+		this.montoTotal = montoTotal;
+		contFactura ++;
+	}
+	public ventaEntradas(LocalDate fecha, Clientes cliente, TreeSet<Eventos> listaEntradas,
+			double montoTotal) {
+		this.idFactura = contFactura;
+		this.diaVenta = fecha;
+		this.cliente = cliente;
+		this.TreeEntradas = listaEntradas;
 		this.montoTotal = montoTotal;
 		contFactura ++;
 	}
